@@ -1,0 +1,15 @@
+body{
+   background-color: rgb(208, 208, 240);
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   border: 0.5cm;
+   }
+h1 {
+   font-size: 2rem;
+   margin-bottom: 0;
+   color: gray;
+ }
+ h2 {
+   font-size: 1,25rem;
+   font-style: bold;
+   color: rgb(255, 0, 0)
+ }
