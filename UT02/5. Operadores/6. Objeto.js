@@ -27,3 +27,12 @@ a = new Array(1,2,3);
 var b = 20;
 console.log(a instanceof Array); // devolverá true.
 console.log(b instanceof Array); // devolverá false.
+
+// new. Creará el objeto hoy de tipo Date() empleando el constructor por defecto de dicho objeto.
+var hoy = new Date();
+
+// this. Este this hace referencia al objeto nombre que estamos validando.
+function  validateInput(evt) {
+    nombre.onchange = validateInput;
+        var  valorDeInput  =  this.value;        
+}
