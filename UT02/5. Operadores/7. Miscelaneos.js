@@ -1,4 +1,3 @@
-
 // La coma sirve para separar variables, por ejemplo.
 var nombre, direccion, apellidos, edad;
 nombre = "simpson ";
@@ -19,7 +18,14 @@ var h = a > b ? a : b;      // a h se le asignará el valor 5;
 console.log(h);
 
 
-// El operador typeof identifica cuando una valirable o expresión es numer, string, boolean, funtion o undefined
+// El operador typeof identifica el valor de una  variable o expresión.
+// Puede ser number, string, boolean, function o undefined
+var miVariable = true;
+
 if  (typeof  miVariable  ==  "number") {
     miVariable  =  parseInt(miVariable);
+    console.log("La variables es " + miVariable + " y es de tipo " + typeof miVariable);
+}
+else{
+    console.log("La variables es " + miVariable + " y es de tipo " + typeof miVariable);
 }

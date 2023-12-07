@@ -9,7 +9,7 @@
 "Marta"  ==  "Marta"    //  true
 "Marta"  ==  "marta"    //  false
 "Marta"  >  "marta"     //  false
-"Mark"  <  "Marta"      //  true
+"Mark"   <  "Marta"     //  true
 
 //Comparación de números con su cadena
 "123" == 123            // true
