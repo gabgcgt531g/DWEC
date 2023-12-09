@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(55, 55, 55);
+    color: white;
+    font-family: 'JetBrains Mono';    
+    font-size: 12px;
+    
+}
+
+h1{
+    background-color: rgb(42, 42, 42);
+    text-align: center;
+    padding: 0 0;
+    top: 0;
+    width: 100%;
+    position: relative;
+    color: lightcoral;
+    font-style:normal;
+    font-size: 35px;
+    border-radius: 10px;
+}
+
+h2{
+    background-color: rgb(42, 42, 42);
+    padding: 0 2%;
+    width: 100%;
+    position: relative;  
+    text-align: 5%;
+    color: lightgreen;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+h3{
+    background-color: rgb(42, 42, 42);
+    padding: 0 2%;
+    width: 100%;
+    position: relative; 
+    color: lightblue;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+ul{
+    background-color: rgb(42, 42, 42);
+    padding: 1em 5%;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    
+}
+p{
+    background-color: rgb(42, 42, 42);
+    padding: 1em 15px;
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}

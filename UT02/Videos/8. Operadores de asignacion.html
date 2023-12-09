@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Operadores de asignación en Javascript</title>
+</head>
+
+<body>
+    <h1>Operadores de asignación en Javascript</h1>
+    <h2>Tipos:</h2>
+    <ul>
+        <li>Igual (=).</li>
+        <li>Suma igual (+=).</li>
+        <li>Resta igual (-=).</li>
+        <li>Multiplicar igual (*=).</li>
+        <li>Dividir (/=).</li>
+        <li>Módulo igual (%=).</li>
+    </ul>
+    <h3>Utilización de operadores de asginación.</h3>
+    <p id="p1">Párrafo 1.</p>
+
+    <script>
+        var x = 10;
+        x += 5; // x = x + 5
+        var y = 10;
+        y -= 5; // x = x - 5
+        var z = 10;
+        z *= 5; // x = x * 5
+        var v = 10;
+        v /= 5; // x = x / 5
+        var w = 10;
+        w %= 5; // x = x % 5
+
+        document.getElementById("p1").innerHTML =
+            "El valor de 'x' es 10." + "<br>" +
+            "==> Ejemplo '+=5'= " + x + "." + "<br>" +
+            "<br>" + "El valor de 'y' es 10." + "<br>" +
+            "==> Ejemplo '-=5'= " + y + "." + "<br>" +
+            "<br>" + "El valor de 'z' es 10." + "<br>" +
+            "==> Ejemplo '*=5'= " + z + "." + "<br>" +
+            "<br>" + "El valor de 'v' es 10." + "<br>" +
+            "==> Ejemplo '/=5'= " + v + "." + "<br>" +
+            "<br>" + "El valor de 'w' es 10." + "<br>" +
+            "==> Ejemplo '%=5'= " + w + ".";
+    </script>
+</body>
+
+</html>
