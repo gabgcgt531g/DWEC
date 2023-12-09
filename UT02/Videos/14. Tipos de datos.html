@@ -14,9 +14,9 @@
         no mostrará error al compilarlo, simplemente, entenderá a ambos como una cadena y los pondrá en orden de
         izquierda a derecha.<br>
         Vemaos los tipos existentes:
-        <ul>
+        <ol>
             <li>
-                <i>String (cadena)</i>. Se definen entre comillas simples ('') o dobles ("").
+                <u>String (cadena)</u>. Se definen entre comillas simples ('') o dobles ("").
             </li>
             <ul>
                 <li id="l1"> =>></li>
@@ -29,10 +29,10 @@
                 </script>
             </ul>
             <li>
-                <i>Number (números)</i>. Pueden ser enteros o decimales (se separa con un punto(.)).
+                <u>Number (números)</u>. Pueden ser enteros o decimales (se separa con un punto(.)).
             </li>
             <li>
-                <i>Notación cientifica (exponencial)</i>. Un ejemplo sería <i>'var x = 12e5;'</i>, donde 12
+                <u>Notación cientifica (exponencial)</u>. Un ejemplo sería <i>'var x = 12e5;'</i>, donde 12
                 es la base y 5 es el número de ceros que le siguen. Si el número después de <i>'e'</i> es negativo,
                 se dividirá entre el número de ceros que indique dicho número.
             </li>
@@ -53,7 +53,7 @@
                 </script>
             </ul>
             <li>
-                <i>Booleanos</i>. Sus valores son <i>true</i> o <i>false</i> y se utilizan para evaluar condiciones.
+                <u>Booleanos</u>. Sus valores son <i>true</i> o <i>false</i> y se utilizan para evaluar condiciones.
             </li>
             <ul>
                 <li id="l3"> =>> </li>
@@ -69,39 +69,46 @@
                 </script>
             </ul>
             <li>
-                <i>Array (arreglos)</i>. Conjunto de valores que se almacenan en una estructura. Los valores se guardan
-                entre corchetes ('var lista = [];'). Se pueden almacenar diferentes tipos de datos.
+                <u>Array (arreglos)</u>. Conjunto de valores que se almacenan en una estructura. Los valores se guardan
+                entre corchetes ([]). Se pueden almacenar diferentes tipos de datos.
             </li>
             <ul>
                 <li id="l4"> =>></li>
-                    <script>
-                        var lista = [1, "Hola", 6, "Mundo!"];
-                        document.getElementById("l4").innerHTML =
-                            "Ejemplo de <b>Array</b>:" + "<br>" +
-                            "var lista = [1, 'Hola', 6, 'Mundo!'];" + "<br>" +
-                            "-> El resultado en la posición dos es: " + lista[1] + "<br>" +
-                            "-> El resultado en la posición tres es: " + lista[2];
-                    </script>
+                <script>
+                    var lista = [1, "Hola", 6, "Mundo!"];
+                    document.getElementById("l4").innerHTML =
+                        "Ejemplo de <b>Array</b>:" + "<br>" +
+                        "var lista = [1, 'Hola', 6, 'Mundo!'];" + "<br>" +
+                        "-> El resultado en la posición dos es: " + lista[1] + "<br>" +
+                        "-> El resultado en la posición tres es: " + lista[2];
+                </script>
             </ul>
             <li>
-                <i>Object (objetos)</i>. Ya hay objetos en Javascript predefinidos. Pero nosotros podemos crearlos.
+                <u>Object (objetos)</u>. Ya hay objetos en Javascript predefinidos. Pero nosotros podemos crearlos,
+                en vez de con corchetes con llaves, introduciendo pares clave-valor.
             </li>
             <ul>
                 <li id="l5"> =>></li>
                 <script>
                     var animal = { nombre: "Paco", tipo: "perro", raza: "snauzer", edad: 12 };
                     document.getElementById("l5").innerHTML =
-                    "Ejemplo de <b>Object</b>:" + "<br>"
+                        "Ejemplo de <b>Object</b>:" + "<br>" +
+                        "var animal = { nombre: 'Paco', tipo: 'perro', raza: 'Schnauzer', edad: 12 };" + "<br>" +
+                        "El tipo de 'animal' es: " + (typeof animal) + "<br>" +
+                        "Es un " + (animal.tipo) +
+                        ", se llama " + (animal.nombre) +
+                        ", de raza " + (animal.raza) +
+                        " y tiene " + (animal.edad) + " años.";
                 </script>
             </ul>
             <li>
-                <i>typeof</i>. Nos muestra el tipo de dato de cada variable u función.
+                <u>typeof</u>. Nos muestra el tipo de dato de cada variable u función.
             </li>
             <ul>
                 <li id="l6"> =>></li>
                 <script>
                     document.getElementById("l6").innerHTML =
-                    "Ejemplo de <b>typeof</b>:" + "<br>" +
+                        "Ejemplo de <b>typeof</b>:" + "<br>" +
                         "Tipo de la variable 'cierto': " + (typeof cierto) + "<br>" +
                         "Tipo de la variable 'x': " + (typeof x) + "<br>" +
                         "Tipo de la variable 'decimal': " + (typeof decimal);
@@ -109,23 +116,69 @@
                 </script>
             </ul>
             <li>
-                <i>Undefined</i>. Nos sirve para controlar los tipos de datos que no están definidos.
+                <u>Undefined</u>. Nos sirve para controlar los tipos de datos que no están definidos. Cuando
+                una varialbe tiene <i>Undefined</i> pierde el tipo.
             </li>
             <ul>
                 <li id="l7"> =>></li>
                 <script>
                     var sinDefinir;
                     document.getElementById("l7").innerHTML =
-                    "Ejemplo de <b>Undefined</b>:" + "<br>" +
-                    "var sinDefinir;" + "<br>" +
-                    "Tipo de la variable 'sinDefinir': " + (typeof sinDefinir);
-
+                        "Ejemplo de <b>Undefined</b>:" + "<br>" +
+                        "var sinDefinir;" + "<br>" +
+                        "Tipo de la variable 'sinDefinir': " + (typeof sinDefinir);
                 </script>
             </ul>
-        </ul>
+            <li>
+                <u>Empty (vacio)</u>. Indica que una variables tiene un tipo de dato definido pero ningún valor. Se
+                utilza
+                sobre en cadenas.
+            </li>
+            <ul>
+                <li id="l8"> =>></li>
+                <script>
+                    var cadena1 = "";
+                    document.getElementById("l8").innerHTML =
+                        "Ejemplo de <b>Empty</b>:" + "<br>" +
+                        "var cadena1 = ''; " + "<br>" +
+                        "El resultado de la cadena es: " + cadena1 + " (vacio).";
+                </script>
+            </ul>
+            <li>
+                <u>Null</u>. No pierde la identidad del tipo de dato, pero indica que su valor es nulo.
+            </li>
+            <ul>
+                <li id="l9"> =>></li>
+                <script>
+                    var animal = null;
+                    document.getElementById("l9").innerHTML =
+                        "Ejemplo de <b>Null</b>:" + "<br>" +
+                        "var animal = null;" + "<br>" +
+                        "El resultado del objeto animal, ahora es: " + animal + ",<br>" +
+                        "pero si preguntamos por su tipo, sigue siendo " + (typeof animal);
+                </script>
+            </ul>
+            <li>
+                <u>Comparativa </u>entre <i>Undefined</i> y <i>Null</i>.
+            </li>
+            <ul>
+                <li id="l10"> =>></li>
+                <script>
+                    var und = undefined;
+                    var nul = null;
+                    document.getElementById("l10").innerHTML =
+                        "Ejemplo de <b>Comparativa</b>:" + "<br>" +
+                        "var und = undefined;" + "<br>" +
+                        "var nul = null;" + "<br>" +
+                        "El tipo de <i>Undefined</i> es " + (typeof und) + "<br>" +
+                        "El tipo de <i>Null</i> es " + (typeof nul) + "<br>" +
+                        "Si preguntamos si los objetos son iguales y del mismo tipo (null === undefined) nos devuelve " + (null === undefined) + ".<br>" +
+                        "Si solo buscamos si hay igualdad en sus resultados (null == undefined) nos devuelve " + (null == undefined);
+                </script>
+            </ul>
+        </ol>
     </div>
 
-    <h2>Ejemplos:</h2>
 </body>
 
 </html>
