@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Operador ternario en Javascript</title>
+</head>
+
+<body>
+    <h1>Operadores lógicos en Javascript</h1>
+    <div>
+        Nos permite hacer la condición if...else en una sola línea de código. Consta de 3 partes:
+        <ol>
+            <li>
+                La primera parte, evalúa una condición. se separa de la segunda por medio de una 
+                interrogración (?).
+            </li>
+            <li>
+                La segunda parte, devuelve el resultado si la condición se cumple.
+            </li>
+            <li>
+                Y la tercera, que se separa de la segunda por medio de con dos puntos (:). Devuelve 
+                el resutlado en el caso de que al condición no se cumpla.
+            </li>
+        </ol>
+    </div>
+
+    <h2>Estructura:</h2>
+
+    <div>
+        ((CONDICIÓN) ? RESULTADO_CIERTO : RESULTADO_FALSO);
+    </div>
+
+    <h3>Utilización de operador lógico AND.</h3>
+    <p id="p1">Párrafo 1.</p>
+
+    <script>
+        var edad = 12;
+        var puedeVotar = ((edad > 18) ? "puede votar" : "no puede votar");
+
+        document.getElementById("p1").innerHTML =
+            "Con la edad de " + edad +
+            " años, el ciudadano " + puedeVotar + ".";
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Operadores de comparación en Javascript</title>
+</head>
+
+<body>
+    <h1>Operadores de comparación en Javascript</h1>
+    <p>Se utilizan para determinar la igualdad o desingualdad entre
+        valores o variables.<br>
+        El resultado dependera del tipo de la variable.</p>
+    
+        <h2>Tipos:</h2>
+
+    <pre>
+-> Operador de igualdad (==):
+    <i>Comprara el valor.</i>
+
+-> Operador de igualdad estricta (===):
+    <i>Comprara el valor y el tipo de dato.</i>
+
+-> Operador de desigualdad (!=):
+    <i>Comprara el valor.</i>
+
+-> Operador de desigualdad estricta (!==):
+    <i>Comprara el valor y el tipo de dato.</i>
+
+-> Operador mayor que (>):
+    <i>Comprara dos valores.</i>
+
+-> Operador menor que (<):
+    <i>Comprara dos valores.</i>
+
+-> Operador mayor o igual que (>=):
+    <i>Comprara dos valores.</i>
+    
+-> Operador menor o igual que (<=):
+    <i>Comprara dos valores.</i></pre>
+
+    <h3>Utilización de operadores de igualdad.</h3>
+    <p id="p1">Párrafo 1.</p>
+
+    <h3>Utilización de operadores de igualdad estricta.</h3>
+    <p id="p2">Párrafo 2.</p>
+
+    <h3>Utilización de operadores de desigualdad.</h3>
+    <p id="p3">Párrafo 3.</p>
+
+    <h3>Utilización de operadores de desigualdad estricta.</h3>
+    <p id="p4">Párrafo 4.</p>
+
+    <h3>Utilización de operadores mayor que.</h3>
+    <p id="p5">Párrafo 5.</p>
+
+    <h3>Utilización de operadores de menor que.</h3>
+    <p id="p6">Párrafo 6.</p>
+
+    <h3>Utilización de operadores de mayor o igual que.</h3>
+    <p id="p7">Párrafo 7.</p>
+
+    <h3>Utilización de operadores de menor o igual que.</h3>
+    <p id="p8">Párrafo 8.</p>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p1").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x == 8 es  " + (x == 8) + "." + "<br>" +
+            "x == 5 es  " + (x == 5) + "." + "<br>" +
+            "x == '5' es  " + (x == "5") + " (No compara el tipo).";
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p2").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x === 8 es  " + (x === 8) + "." + "<br>" +
+            "x === 5 es  " + (x === 5) + "." + "<br>" +
+            "x === '5' es  " + (x === "5");
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p3").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x != 8 es  " + (x != 8) + "." + "<br>" +
+            "x != 5 es  " + (x != 5) + "." + "<br>" +
+            "x != '5' es  " + (x != "5") + " (No compara el tipo).";
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p4").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x !== 8 es  " + (x !== 8) + "." + "<br>" +
+            "x !== 5 es  " + (x !== 5) + "." + "<br>" +
+            "x !== '5' es  " + (x !== "5");
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p5").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x > 8 es  " + (x > 8) + "." + "<br>" +
+            "x > 5 es  " + (x > 5) + "." + "<br>" +
+            "x > 4 es  " + (x > 4);
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p6").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x < 8 es  " + (x < 8) + "." + "<br>" +
+            "x < 5 es  " + (x < 5) + "." + "<br>" +
+            "x < 4 es  " + (x < 4);
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p7").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x >= 8 es  " + (x >= 8) + "." + "<br>" +
+            "x >= 5 es  " + (x >= 5) + "." + "<br>" +
+            "x >= 4 es  " + (x >= 4);
+    </script>
+
+    <script>
+        var x = 5;
+
+        document.getElementById("p8").innerHTML =
+            "<i> var x = 5. </i>" + "<br>" +
+            "x <= 8 es  " + (x <= 8) + "." + "<br>" +
+            "x <= 5 es  " + (x <= 5) + "." + "<br>" +
+            "x <= 4 es  " + (x <= 4);
+    </script>
+
+</body>
+
+</html>

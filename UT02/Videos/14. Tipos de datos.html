@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Tipos de datos en Javascript</title>
+</head>
+
+<body>
+    <h1>Tipos de datos en Javascript</h1>
+    <div>
+        Javascript no es un lenguaje fuertemente tipado, por lo que, al sumar, por ejemplo, una cadena y un número,
+        no mostrará error al compilarlo, simplemente, entenderá a ambos como una cadena y los pondrá en orden de
+        izquierda a derecha.<br>
+        Vemaos los tipos existentes:
+        <ul>
+            <li>
+                <i>String (cadena)</i>. Se definen entre comillas simples ('') o dobles ("").
+            </li>
+            <ul>
+                <li id="l1"> =>></li>
+                <script>
+                    var x = "cadena" + 15;
+                    document.getElementById("l1").innerHTML =
+                        "Ejemplo de <b>String</b>:" + "<br>" +
+                        "var x = 'cadena' + 15;" + "<br>" +
+                        "-> El resultado es: " + x;
+                </script>
+            </ul>
+            <li>
+                <i>Number (números)</i>. Pueden ser enteros o decimales (se separa con un punto(.)).
+            </li>
+            <li>
+                <i>Notación cientifica (exponencial)</i>. Un ejemplo sería <i>'var x = 12e5;'</i>, donde 12
+                es la base y 5 es el número de ceros que le siguen. Si el número después de <i>'e'</i> es negativo,
+                se dividirá entre el número de ceros que indique dicho número.
+            </li>
+            <ul>
+                <li id="l2"> =>></li>
+                <script>
+                    var entero = 15;
+                    var decimal = 3.56;
+                    var exp = 12e4;
+                    document.getElementById("l2").innerHTML =
+                        "Ejemplo de <b>Number</b>:" + "<br>" +
+                        "var entero = 15;" + "<br>" +
+                        "-> El resultado es: " + entero + "<br>" +
+                        "var decimal = 3.56;" + "<br>" +
+                        "-> El resultado es: " + decimal + "<br>" +
+                        "var exp = 12e4;" + "<br>" +
+                        "-> El resultado es: " + exp;
+                </script>
+            </ul>
+            <li>
+                <i>Booleanos</i>. Sus valores son <i>true</i> o <i>false</i> y se utilizan para evaluar condiciones.
+            </li>
+            <ul>
+                <li id="l3"> =>> </li>
+                <script>
+                    var cierto = true;
+                    var falso = false;
+                    document.getElementById("l3").innerHTML =
+                        "Ejemplo de <b>Boolean</b>:" + "<br>" +
+                        "var cierto = true;" + "<br>" +
+                        "-> El resultado es: " + cierto + "<br>" +
+                        "var falso = false;" + "<br>" +
+                        "-> El resultado es: " + falso;
+                </script>
+            </ul>
+            <li>
+                <i>Array (arreglos)</i>. Conjunto de valores que se almacenan en una estructura. Los valores se guardan
+                entre corchetes ('var lista = [];'). Se pueden almacenar diferentes tipos de datos.
+            </li>
+            <ul>
+                <li id="l4"> =>></li>
+                    <script>
+                        var lista = [1, "Hola", 6, "Mundo!"];
+                        document.getElementById("l4").innerHTML =
+                            "Ejemplo de <b>Array</b>:" + "<br>" +
+                            "var lista = [1, 'Hola', 6, 'Mundo!'];" + "<br>" +
+                            "-> El resultado en la posición dos es: " + lista[1] + "<br>" +
+                            "-> El resultado en la posición tres es: " + lista[2];
+                    </script>
+            </ul>
+            <li>
+                <i>Object (objetos)</i>. Ya hay objetos en Javascript predefinidos. Pero nosotros podemos crearlos.
+            </li>
+            <ul>
+                <li id="l5"> =>></li>
+                <script>
+                    var animal = { nombre: "Paco", tipo: "perro", raza: "snauzer", edad: 12 };
+                    document.getElementById("l5").innerHTML =
+                    "Ejemplo de <b>Object</b>:" + "<br>"
+                </script>
+            </ul>
+            <li>
+                <i>typeof</i>. Nos muestra el tipo de dato de cada variable u función.
+            </li>
+            <ul>
+                <li id="l6"> =>></li>
+                <script>
+                    document.getElementById("l6").innerHTML =
+                    "Ejemplo de <b>typeof</b>:" + "<br>" +
+                        "Tipo de la variable 'cierto': " + (typeof cierto) + "<br>" +
+                        "Tipo de la variable 'x': " + (typeof x) + "<br>" +
+                        "Tipo de la variable 'decimal': " + (typeof decimal);
+
+                </script>
+            </ul>
+            <li>
+                <i>Undefined</i>. Nos sirve para controlar los tipos de datos que no están definidos.
+            </li>
+            <ul>
+                <li id="l7"> =>></li>
+                <script>
+                    var sinDefinir;
+                    document.getElementById("l7").innerHTML =
+                    "Ejemplo de <b>Undefined</b>:" + "<br>" +
+                    "var sinDefinir;" + "<br>" +
+                    "Tipo de la variable 'sinDefinir': " + (typeof sinDefinir);
+
+                </script>
+            </ul>
+        </ul>
+    </div>
+
+    <h2>Ejemplos:</h2>
+</body>
+
+</html>
