@@ -3,69 +3,63 @@ body {
   color: white;
   font-family: "JetBrains Mono";
   font-size: 12px;
+  width: 92%;
 }
 
 h1 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
   top: 0;
-  width: 90%;
   position: relative;
   color: lightcoral;
   font-style: normal;
   font-size: 35px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 h2 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
-  width: 90%;
   position: relative;
   text-align: 5%;
   color: cadetblue;
   font-size: 28px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 h3 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
-  width: 90%;
   position: relative;
   color: khaki;
   font-size: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 ul {
   background-color: rgb(42, 42, 42);
   padding: 1% 2%;
-  width: 90%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 p {
   background-color: rgb(42, 42, 42);
   padding: 1% 2%;
-  width: 90%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 pre {
   background-color: rgb(42, 42, 42);
   padding: 1% 2%;
-  width: 90%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 div {
   background-color: rgb(42, 42, 42);
   padding: 1% 2%;
-  width: 90%;
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
 }

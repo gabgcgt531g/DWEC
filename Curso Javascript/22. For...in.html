@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencia For...in en Javascript</title>
+</head>
+
+<body>
+  <h1>Sentencia For...in en Javascript</h1>
+  <h3>For..in</h3>
+  <div>
+    <ul>
+      <li>
+        <u><b>Definición</b></u>: Nos permite recorrer <i>arrays</i> y <i>listas</i>.
+      </li>
+      <br>
+      <li><u><b>Sintáxis</b></u>:</li>
+      <br>
+      <i>for (sentencia_almacena_valores in sentencia_valor_array) { <br />
+        //Código para que muestre valores <br>
+        } </i>
+      <br><br>
+      -> <b>sentencia_almacena_valores</b>: en ella almacenarmos cada valor que muestre, del array.
+      <br>
+      -> <b>sentencia_array</b>:indica el nombre del array del queremos traer sus valores.
+      <br><br>
+      <i>
+        var animal = {nombre: "Paco", tipo: "perro", raza: "Snauzer", edad: 12};<br>
+        var propiedad;<br>
+        for (propiedad in animal) { <br>
+        document.write(animal[propiedad]);
+        <br>
+        } <br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var animal = { nombre: " Paco, ", tipo: " perro, ", raza: " Snauzer, ", edad: 12 };
+        var propiedad;
+        for (propiedad in animal) {
+          document.write(animal[propiedad]);
+        }
+      </script>
+      <br>
+    </ul>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -1,59 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>if...else en Javascript</title>
-  </head>
 
-  <body>
-    <h1>if...else en Javascript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencia While en Javascript</title>
+</head>
 
-    <h3>=>></h3>
+<body>
+  <h1>Sentencia While en Javascript</h1>
+  <h3>While</h3>
+  <div>
     <ul>
-      <li><u>Características</u>:</li>
-      -> Se definen dentro de una función.
-      <br />
-      -> Tienen ámbito local en la función.
-      <br />
-      -> Son accesibles únicamnte desde dentro de la función.
-      <br />
-      -> Podemos declarar variables con el mismo nombre en diferentes funciones.
-      <br />
-      -> La variable local desparece cuando acaba la función.
-      <ul>
-        <li id="l1">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-          }
-          saludar();
-          document.getElementById("l1").innerHTML =
-            "Ejemplo de <b>variables ámbito local</b>:<br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "}<br><br>" +
-            "El resultado de saludar(); es " +
-            saludar() +
-            ".<br> =>> No reconoce la variable fuera de la función y no ejecuta ésta.";
-        </script>
-        <br />
-        <li id="l2">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-            return saludo;
-          }
-          document.getElementById("l2").innerHTML =
-            "<b>Solución</b>: llamar a la variable dentro de la función. <br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "return saludo;<br>" +
-            "}<br><br>" +
-            "El resultado de <i>saludar();</i> es: " +
-            saludar();
-        </script>
-      </ul>
+      <li>
+        <u><b>Definición</b></u>: a diferencia del bucle for, permite ejecutar código mientras se cumpla una condición,
+        no le indicamos las veces exactas
+        .
+      </li>
+      <br>
+      <li><u><b>Sintáxis</b></u>:</li>
+      <br>
+      <i>while (condición) { <br />
+        //Código a ejecutar <br>
+        } </i>
+      <br><br>
+      -> <b>condición</b>: definimos la condición para que entre el bucle.
+      <br><br>
+      <i>
+        var i = 0;
+        <br>
+        while (i < 10) { <br>
+          document.write(i);<br>
+          i++; <br>
+          } <br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var i = 0;
+        while (i < 10) {
+          document.write(i);
+          i++;
+        }
+      </script>
+      <br><br>
+      -> Se puede hacer lo mismo con un bucle <i>for</i> sin la tercera sentencia y sin la primera y la tercera. A
+      continuación los ejemplos:
+      <br><br>
+      <i>
+        var j;<br>
+        for (j = 1; j < 5;) { <br>
+          document.write(j);<br>
+          j++<br>
+          } <br>
+      </i>
+      <b>El resultado es</b>:
+
+      <script>
+        var j;
+        for (j = 1; j < 5;) {
+          document.write(j);
+          j++
+        }
+      </script>
+      <br><br>
+      <i>
+        var k = 1;<br>
+        for (; k < 5;) { <br>
+          document.write(k);<br>
+          k++<br>
+          } <br>
+      </i>
+      <b>El resultado es</b>:
+
+      <script>
+        var k = 1;
+        for (; k < 5;) {
+          document.write(k);
+          k++
+        }
+      </script>
+      <br>
     </ul>
-  </body>
+    </ul>
+  </div>
+</body>
+
 </html>

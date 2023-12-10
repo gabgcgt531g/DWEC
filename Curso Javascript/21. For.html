@@ -1,59 +1,151 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>if...else en Javascript</title>
-  </head>
 
-  <body>
-    <h1>if...else en Javascript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencia For en Javascript</title>
+</head>
 
-    <h3>=>></h3>
+<body>
+  <h1>Sentencia For en Javascript</h1>
+  <h3>For</h3>
+  <div>
     <ul>
-      <li><u>Características</u>:</li>
-      -> Se definen dentro de una función.
-      <br />
-      -> Tienen ámbito local en la función.
-      <br />
-      -> Son accesibles únicamnte desde dentro de la función.
-      <br />
-      -> Podemos declarar variables con el mismo nombre en diferentes funciones.
-      <br />
-      -> La variable local desparece cuando acaba la función.
-      <ul>
-        <li id="l1">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-          }
-          saludar();
-          document.getElementById("l1").innerHTML =
-            "Ejemplo de <b>variables ámbito local</b>:<br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "}<br><br>" +
-            "El resultado de saludar(); es " +
-            saludar() +
-            ".<br> =>> No reconoce la variable fuera de la función y no ejecuta ésta.";
-        </script>
-        <br />
-        <li id="l2">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-            return saludo;
-          }
-          document.getElementById("l2").innerHTML =
-            "<b>Solución</b>: llamar a la variable dentro de la función. <br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "return saludo;<br>" +
-            "}<br><br>" +
-            "El resultado de <i>saludar();</i> es: " +
-            saludar();
-        </script>
-      </ul>
+      <li>
+        <u>Definición de <b>For</b></u>: Nos permite ejecutar el código un número
+        determinado de veces.
+      </li>
+      <br>
+      <li><u>Sintaxis de <b>For</b></u>:</li>
+      <br>
+      <i>for (sentencia_1; sentencia_2; sentencia_3) { <br />
+        //Código que quermemos que se repita <br>
+        } </i>
+      <br><br>
+      -> <b>sentencia_1</b>: se ejecuta antes de que empiece el bloque de código a repetir.
+      <br>
+      -> <b>sentencia_2</b>: define la condición por la que el bloque de código se va a ejecutar.
+      <br>
+      -> <b>sentencia_3</b>: se ejecuta después de que acabe el bloque de código a repetir.
+      <br><br>
+      <i>
+        var i;
+        <br>
+        for (i = 0; i < 5; i++) { <br>
+          document.write(i);
+          <br>
+          } <br>
+      </i>
+      <br>
+      El resultado es:
+      <script>
+        var i;
+        for (i = 0; i <= 5; i++) {
+          document.write(i);
+        }
+      </script>
+      <br>
     </ul>
-  </body>
+    </ul>
+  </div>
+  <h3>Variaciones.</h3>
+  <div>
+    <ol>
+      <li>
+        Si omitimos la primera sentencia, deberemos haber inicializado las variable
+        con anterioridad.
+      </li>
+      <br>
+      <i>
+        var j;
+        <br>
+        for (; j < 5; j++) { <br>
+          document.write(j);
+          <br>
+          } <br>
+      </i>
+      <br>
+      El resultado es:
+      <script>
+        var j = 1;
+        for (; j <= 5; j++) {
+          document.write(j);
+        }
+      </script>
+      <br><br>
+      <li>
+        Si omitimos la segunda sentencia, dentro del código, a repetir, debemos incluir una instrucción break.
+      </li>
+      <br>
+      <i>
+        var k;
+        <br>
+        for (k = 1; ; k++) { <br>
+        document.write(k);<br>
+        if (k == 5) { <br>
+        break; <br>
+        }<br>
+        } <br>
+      </i>
+      <br>
+      El resultado es:
+      <script>
+        var k;
+        for (k = 1; ; k++) {
+          document.write(k);
+          if (k == 5) {
+            break;
+          }
+        }
+      </script>
+      <br><br>
+      <li>
+        Si omitimos la tercera sentencia, debemos incrementar o decrementar el valor de la variable dentro del bucle.
+      </li>
+      <br>
+      <i>
+        var l;
+        <br>
+        for ( l= 1; l <= 5; ) { <br>
+          document.write(l);<br>
+          l++ <br>
+          }<br>
+          } <br>
+      </i>
+      <br>
+      El resultado es:
+      <script>
+        var l;
+        for (l = 1; l <= 5;) {
+          document.write(l);
+          l++;
+        }
+      </script>
+      <br><br>
+      <li>
+        Se puede trabajar con dos o mas valores dentro del bucle.
+      </li>
+      <br>
+      <i>
+        var m, n;
+        <br>
+        for (m = 1, n = 10; m <= 10, n>= 1; m++, n--) { <br>
+          alert("var m = " + m + "; var n = " + n)<br>
+          } <br>
+      </i>
+      <br>
+      El resultado sale en pop ups.
+      <script>
+        var m, n;
+        for (m = 1, n = 10; m <= 10, n >= 1; m++, n--) {
+          alert("var m = " + m + "; var n = " + n);
+        }
+      </script>
+      <br><br>
+    </ol>
+  </div>
+
+</body>
+
 </html>

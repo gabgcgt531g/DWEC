@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>if...else en Javascript</title>
-  </head>
 
-  <body>
-    <h1>if...else en Javascript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencias break y continue en Javascript</title>
+</head>
 
-    <h3>=>></h3>
+<body>
+  <h1>Sentencias break y continue en Javascript</h1>
+  <h2>break y continue</h2>
+  <h3>break</h3>
+  <div>
     <ul>
-      <li><u>Características</u>:</li>
-      -> Se definen dentro de una función.
-      <br />
-      -> Tienen ámbito local en la función.
-      <br />
-      -> Son accesibles únicamnte desde dentro de la función.
-      <br />
-      -> Podemos declarar variables con el mismo nombre en diferentes funciones.
-      <br />
-      -> La variable local desparece cuando acaba la función.
-      <ul>
-        <li id="l1">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
+      <li>
+        <u><b>Definición</b></u>: hace que salgas de un bucle, finalizandolo.
+      </li>
+      <br>
+      <li><u><b>Sintáxis</b></u>:se puede inlcuir en bucles, como ya hemos visto, como son switch, o for.</li>
+      <br>
+      <i>
+        var i;<br>
+        for (i = 0; i < 10; i++){<br>
+          if(i == 3){<br>
+          break;<br>
+          } <br>
+          document.write(i);<br>
+          } <br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var i;
+        for (i = 0; i < 10; i++) {
+          if (i == 3) {
+            break;
           }
-          saludar();
-          document.getElementById("l1").innerHTML =
-            "Ejemplo de <b>variables ámbito local</b>:<br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "}<br><br>" +
-            "El resultado de saludar(); es " +
-            saludar() +
-            ".<br> =>> No reconoce la variable fuera de la función y no ejecuta ésta.";
-        </script>
-        <br />
-        <li id="l2">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-            return saludo;
-          }
-          document.getElementById("l2").innerHTML =
-            "<b>Solución</b>: llamar a la variable dentro de la función. <br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "return saludo;<br>" +
-            "}<br><br>" +
-            "El resultado de <i>saludar();</i> es: " +
-            saludar();
-        </script>
-      </ul>
+          document.write(i);
+        }
+      </script>
+      <br>
+      Sale del bucle cuano se cumple la condición que ejecuta el <i>break</i>.
     </ul>
-  </body>
+    </ul>
+  </div>
+  <h3>continue</h3>
+  <div>
+    <ul>
+      <li>
+        <u><b>Definición</b></u>: hace saltar hasta la sigueinte iteración del bucle. Permite saltar una o mas
+        iteraciones.
+      </li>
+      <br>
+      <li><u><b>Sintáxis</b></u>:se puede inlcuir en bucles, como ya hemos visto, como son switch, o for.</li>
+      <br>
+      <i>
+        var j;<br>
+        for (j = 0; j < 10; j++){<br>
+          if(j == 3){<br>
+          continue;<br>
+          } <br>
+          document.write(j);<br>
+          } <br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var j;
+        for (j = 0; j < 10; j++) {
+          if (j == 3 || j == 5) {
+            continue;
+          }
+          document.write(j);
+        }
+      </script>
+      <br>
+      Con la sentencia <i>continue</i>, salta la iteración, que le marca la condición, hasta la siguiente instrucción.
+    </ul>
+    </ul>
+  </div>
+</body>
+
 </html>
