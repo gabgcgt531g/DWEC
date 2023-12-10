@@ -1,3 +1,3 @@
-function primerScript(){
-    alert("Primer script!");
+function primerScript() {
+  alert("Primer script!");
 }

@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Variables en Javascript</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Variables en Javascript</h1>
     <h2>Tipos:</h2>
     <ul>
-        <li>Identificadores únicos.</li>
-        <li>Recomendable utilizar indentificadores descriptivos.</li>
-        <li>Empizan por letra, $, o _ y siguen con letra, $, _ o números.</li>
-        <li>Pueden contener cadenas ("", '') y números (enteros o decimales).</li>
-        <li>Son sensibles a las mayúsculas (nombre != NOMBRE != Nombre).</li>
-        <li>No pueden utilizarse palabras reservadas.</li>
-    </ul>    
+      <li>Identificadores únicos.</li>
+      <li>Recomendable utilizar indentificadores descriptivos.</li>
+      <li>Empizan por letra, $, o _ y siguen con letra, $, _ o números.</li>
+      <li>Pueden contener cadenas ("", '') y números (enteros o decimales).</li>
+      <li>Son sensibles a las mayúsculas (nombre != NOMBRE != Nombre).</li>
+      <li>No pueden utilizarse palabras reservadas.</li>
+    </ul>
     <p id="parrafo1"></p>
     <p id="parrafo2"></p>
     <script>
-        //Creación de variable
-        var nombre; //Valor indefinido
+      //Creación de variable
+      var nombre; //Valor indefinido
 
-        //Muestra 'undefined' porque 'nombre' no tiene valor
-        document.getElementById("parrafo1").innerHTML = nombre;
+      //Muestra 'undefined' porque 'nombre' no tiene valor
+      document.getElementById("parrafo1").innerHTML = nombre;
 
-        //Le asinamos valor a la variable 'nombre'
-        nombre = "Gabriel González Carvajal";
+      //Le asinamos valor a la variable 'nombre'
+      nombre = "Gabriel González Carvajal";
 
-        //Mostramos el valor de la variable 'nombre' en el parrafo2
-        document.getElementById("parrafo2").innerHTML = nombre + ".";
+      //Mostramos el valor de la variable 'nombre' en el parrafo2
+      document.getElementById("parrafo2").innerHTML = nombre + ".";
     </script>
 
     <p id="parrafo3"></p>
     <script>
-        //Declaración de varialbes en una solo sentencia
-        var pais = "España", nacimiento = 1989;
+      //Declaración de varialbes en una solo sentencia
+      var pais = "España",
+        nacimiento = 1989;
 
-        //Asignación de operaciones a una variable
-        var nombreApellido = "Gabriel" + " " + "González";
-        var fallecimineto = nacimiento + 103;
+      //Asignación de operaciones a una variable
+      var nombreApellido = "Gabriel" + " " + "González";
+      var fallecimineto = nacimiento + 103;
 
-        //Sustituye el texto junto contenido de las variables
-        document.getElementById("parrafo3").innerHTML = 
-        nombreApellido + " nació en " +
-        nacimiento + " en un pueblo de " +
-        pais + " y murió en " +
-        fallecimineto + ".";
+      //Sustituye el texto junto contenido de las variables
+      document.getElementById("parrafo3").innerHTML =
+        nombreApellido +
+        " nació en " +
+        nacimiento +
+        " en un pueblo de " +
+        pais +
+        " y murió en " +
+        fallecimineto +
+        ".";
     </script>
-</body>
-
+  </body>
 </html>

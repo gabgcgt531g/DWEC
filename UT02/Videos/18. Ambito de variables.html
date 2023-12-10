@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ámbito de variables en Javascript</title>
+  </head>
+
+  <body>
+    <h1>Ámbito de variables en Javascript</h1>
+    <h3>Variables locales.</h3>
+    <ul>
+      <li><u>Características</u>:</li>
+      -> Se definen dentro de una función.
+      <br />
+      -> Tienen ámbito local en la función.
+      <br />
+      -> Son accesibles únicamnte desde dentro de la función.
+      <br />
+      -> Podemos declarar variables con el mismo nombre en diferentes funciones.
+      <br />
+      -> La variable local desparece cuando acaba la función.
+      <ul>
+        <li id="l1">-> error</li>
+        <script>
+          function saludar() {
+            var saludo = "Hola!";
+          }
+          saludar();
+          document.getElementById("l1").innerHTML =
+            "Ejemplo de <b>variables ámbito local</b>:<br>" +
+            "function saludar() {<br>" +
+            "var saludo = 'Hola!';<br>" +
+            "}<br><br>" +
+            "El resultado de saludar(); es " +
+            saludar() +
+            ".<br> =>> No reconoce la variable fuera de la función y no ejecuta ésta.";
+        </script>
+        <br />
+        <li id="l2">-> error</li>
+        <script>
+          function saludar() {
+            var saludo = "Hola!";
+            return saludo;
+          }
+          document.getElementById("l2").innerHTML =
+            "<b>Solución</b>: llamar a la variable dentro de la función. <br>" +
+            "function saludar() {<br>" +
+            "var saludo = 'Hola!';<br>" +
+            "return saludo;<br>" +
+            "}<br><br>" +
+            "El resultado de <i>saludar();</i> es: " +
+            saludar();
+        </script>
+      </ul>
+    </ul>
+    <h3>Variables globales.</h3>
+    <ul>
+      <li><u>Características</u>:</li>
+      -> Se definen fuera de las funciones.
+      <br />
+      -> Tienen ámbito global, en toda la página.
+      <br />
+      -> Son accesibles únicamnte desde dentro y fuera de la función.
+      <br />
+      -> La variable global desparece cuando acaba la página.
+      <ul>
+        <li id="l3">-> error</li>
+        <script>
+          var despedida = "Adios!";
+          function despedir() {
+            return despedida;
+          }
+
+          document.getElementById("l3").innerHTML =
+            "Ejemplo de <b>variables ámbito global</b>:<br>" +
+            " var despedida = 'Adios!';<br>" +
+            "function despedir() {<br>" +
+            "return despedida;{<br>" +
+            "}<br><br>" +
+            "El resultado de saludar(); es " +
+            despedir();
+        </script>
+      </ul>
+    </ul>
+    <h3>Variables automáticamente globales.</h3>
+    <ul>
+      <li><u>Características</u>:</li>
+      -> Si asginamos un valor a una variable no declarada, se convierte en
+      global.
+      <ul>
+        <li id="l4">-> error</li>
+        <script>
+          function preguntar() {
+            pregunta = "¿Qué tal?";
+          }
+          preguntar();
+          document.getElementById("l4").innerHTML =
+            "Ejemplo de <b>variables ámbito automáticamente global</b>:<br>" +
+            "function preguntar() {<br>" +
+            "pregunta = '¿Qué tal?';<br>" +
+            "}<br><br>" +
+            "preguntar(); <br>" +
+            "El resultado de preguntar(); es " +
+            pregunta +
+            "<br> =>> Al no identificarla con <i>var</i>, reconoce la variable como una global.";
+        </script>
+      </ul>
+    </ul>
+    <h3>Variables globales y locales con el mismo nombre.</h3>
+    <ul>
+      <li><u>Características</u>:</li>
+      -> Podemos utilizar el mismo nombre para una variable local y una global,
+      pero la manera de llamarlas difiere. Veremos a continucaión.
+      <ul>
+        <li id="l5">-> error</li>
+        <script>
+          var miVariable = "Global";
+
+          function ambito() {
+            var miVariable = "Local";
+            return miVariable;
+          }
+          document.getElementById("l5").innerHTML =
+            "Ejemplo de <b>variables globales y locales</b>:<br>" +
+            "var miVariable = 'Global';<br>" +
+            "function ambito() {<br>" +
+            "var miVariable = 'Local';<br>" +
+            "return miVariable;;<br>" +
+            "}<br><br>" +
+            "Con <i>miVariable</i> devuelve la variable: " +
+            miVariable +
+            "<br> Con <i>ambito()</i> devuelve la variable: " +
+            ambito() +
+            "<br>De nuevo con <i>miVariable</i> devuelve la variable: " +
+            miVariable;
+        </script>
+      </ul>
+    </ul>
+    <h3>Variable global redefinada dentro de una función.</h3>
+    <ul>
+      <li><u>Características</u>:</li>
+      -> Si asginamos una variable automáticamente global, dentro de la función,
+      la variable de dentro de la función pisa a la de fuera, por orden de
+      compilación.
+      <ul>
+        <li id="l6">-> error</li>
+        <script>
+          var miVariable2 = "Global";
+
+          function ambito2() {
+            miVariable2 = "Local";
+            return miVariable2;
+          }
+          document.getElementById("l6").innerHTML =
+            "Ejemplo de <b>Variable global redefinada dentro de una función</b>:<br>" +
+            "var miVariable2 = 'Global';<br>" +
+            "function ambito2() {<br>" +
+            "miVariable2 = 'Local';<br>" +
+            "return miVariable2;<br>" +
+            "}<br><br>" +
+            "Con <i>miVariable2</i> devuelve la variable: " +
+            miVariable2 +
+            "<br> Con <i>ambito2()</i> devuelve la variable: " +
+            ambito2() +
+            "<br>De nuevo con <i>miVariable2</i> devuelve la variable: " +
+            miVariable2;
+        </script>
+      </ul>
+    </ul>
+  </body>
+</html>

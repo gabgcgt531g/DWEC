@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Operadores aritméticos en Javascript</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Operadores aritméticos en Javascript</h1>
     <h2>Tipos:</h2>
     <ul>
-        <li>Suma (+).</li>
-        <li>Resta(-).</li>
-        <li>Multiplicar (*).</li>
-        <li>Dividir (/).</li>
-        <li>Módulo (%).</li>
-        <li>Incremental (++).</li>
-        <li>Decremental (--).</li>
+      <li>Suma (+).</li>
+      <li>Resta(-).</li>
+      <li>Multiplicar (*).</li>
+      <li>Dividir (/).</li>
+      <li>Módulo (%).</li>
+      <li>Incremental (++).</li>
+      <li>Decremental (--).</li>
     </ul>
     <h3>Utilización de operadores.</h3>
     <p id="p1">Párrafo 1.</p>
@@ -26,43 +25,64 @@
     <h3>Ejemplo de operadores unarios.</h3>
     <p id="p3">Párrafo 3.</p>
     <script>
-        var x = 5, y = 2;
+      var x = 5,
+        y = 2;
 
-        var dosNumeros = 1 + 7;
-        var dosVariables = x + y;
-        var numeroVariable = 4 + x;
+      var dosNumeros = 1 + 7;
+      var dosVariables = x + y;
+      var numeroVariable = 4 + x;
 
-        document.getElementById("p1").innerHTML =
-            "La variable dosNumeros contiene: " + dosNumeros + "<br>" +
-            "La variable dosVariables contiene: " + dosVariables + "<br>" +
-            "La variable numeroVariable contiene: " + numeroVariable;
+      document.getElementById("p1").innerHTML =
+        "La variable dosNumeros contiene: " +
+        dosNumeros +
+        "<br>" +
+        "La variable dosVariables contiene: " +
+        dosVariables +
+        "<br>" +
+        "La variable numeroVariable contiene: " +
+        numeroVariable;
     </script>
 
     <script>
-        var suma = x + y;
-        var resta = x - y;
-        var multiplicar = x * y;
-        var dividir = x / y;
-        var modulo = x % y;
+      var suma = x + y;
+      var resta = x - y;
+      var multiplicar = x * y;
+      var dividir = x / y;
+      var modulo = x % y;
 
-        document.getElementById("p2").innerHTML =
-            "El resultado de la suma: " + suma + "<br>" +
-            "El resultado de la resta: " + resta + "<br>" +
-            "El resultado de la mulitiplicación: " + multiplicar + "<br>" +
-            "El resultado de la división: " + dividir + "<br>" +
-            "El resultado del módulo: " + modulo;
+      document.getElementById("p2").innerHTML =
+        "El resultado de la suma: " +
+        suma +
+        "<br>" +
+        "El resultado de la resta: " +
+        resta +
+        "<br>" +
+        "El resultado de la mulitiplicación: " +
+        multiplicar +
+        "<br>" +
+        "El resultado de la división: " +
+        dividir +
+        "<br>" +
+        "El resultado del módulo: " +
+        modulo;
     </script>
 
     <script>
-        var a = 8;
-        var b = 12;
+      var a = 8;
+      var b = 12;
 
-        document.getElementById("p3").innerHTML =
-            "El valor de 'a' es: " + a + ". " +
-            "El resultado del incremento: " + ++a + "<br>" +
-            "El valor de 'b' es: " + b + ". " +
-            "El resultado del decremento: " + --b;;
+      document.getElementById("p3").innerHTML =
+        "El valor de 'a' es: " +
+        a +
+        ". " +
+        "El resultado del incremento: " +
+        ++a +
+        "<br>" +
+        "El valor de 'b' es: " +
+        b +
+        ". " +
+        "El resultado del decremento: " +
+        --b;
     </script>
-</body>
-
+  </body>
 </html>

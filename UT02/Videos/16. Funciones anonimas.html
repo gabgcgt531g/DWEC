@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Funciones anónimas en Javascript</title>
+  </head>
+
+  <body>
+    <h1>Funciones anónimas en Javascript</h1>
+    <h3>Sintaxis.</h3>
+    <ul>
+      <li>
+        Son funciones que no tienen nombre. Su estructuras es la misma que las
+        anteriores, parámetros sin nombre. Se invocan llamando al nombre de la
+        variable que la almacenan.
+      </li>
+
+      <ul>
+        <li id="l1">-> error <-</li>
+        <script>
+          var producto = function (a, b) {
+            return a * b;
+          };
+          var resultado = producto(3, 6);
+          document.getElementById("l1").innerHTML =
+            "Ejemplo de <b>función anónima</b>:<br><br>" +
+            "var producto = function (a, b) {<br>" +
+            "return a * b;<br>" +
+            "}<br><br>" +
+            "var resultado = producto(3, 6);<br><br>" +
+            "-> El resultado es: " +
+            resultado;
+        </script>
+      </ul>
+    </ul>
+
+    <h3>¿En qué consiste el constructor <i>function()</i>?</h3>
+    <ul>
+      <li>
+        Llamamos a la función en modo de <i>constructor</i>, como un objeto.
+      </li>
+      <ul>
+        <li id="l2">-> error <-</li>
+        <script>
+          var miFuncion = new Function("a", "b", "return a * b");
+          var resultado1 = miFuncion(5, 7);
+
+          document.getElementById("l2").innerHTML =
+            "Ejemplo de <b>función anónima como objeto</b>:<br><br>" +
+            "var miFuncion = new Function ('a', 'b', 'return a * b');<br>" +
+            "var resultado1 = miFuncion(5, 7);<br><br>" +
+            "-> El valor de  <i>resultado1</i> es: " +
+            resultado1;
+        </script>
+      </ul>
+    </ul>
+    <h3>Funciones anónimas autoinvocadas</h3>
+    <ul>
+      <li>
+        Para que una función se ejecte sin ser llamada, antes de la última
+        llave, hay que abrir y cerrar paréntesis. Para que se ejecute como una
+        expresión, hay que meter toda la función entre dos paréntesis.
+      </li>
+      <ul>
+        <li id="l3">-> error <-</li>
+        <script>
+          (function () {
+            alert("Hola");
+          })();
+          document.getElementById("l3").innerHTML =
+            "Ejemplo de <b>función autoinvocada</b>:<br><br>" +
+            "(function () {alert('Hola');}());";
+        </script>
+      </ul>
+    </ul>
+  </body>
+</html>

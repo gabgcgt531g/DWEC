@@ -1,61 +1,105 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Funciones en Javascript</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Operadores lógicos en Javascript</title>
-</head>
-
-<body>
-    <h1>Operadores lógicos en Javascript</h1>
-
-    <h2>Tipos:</h2>
-
+  <body>
+    <h1>Funciones en Javascript</h1>
+    <h3>Sintaxis.</h3>
     <ul>
-        <li>AND (&&).</li>
-        <li>OR (||).</li>
-        <li>NOT (!).</li>
+      <li>Se compone de:</li>
+      <ul>
+        <li>
+          La palabra resevada <i>funtion</i>, el nombre de la función
+          (<i>nombreFuncion</i>), los parámetros entre paréntesis, separados por
+          comas, y entre llaves el código de la función.
+        </li>
+      </ul>
+      <ul>
+        <li id="l1">=>></li>
+        <script>
+          function saludo() {
+            document.getElementById("l1").innerHTML =
+              "Ejemplo de <b>función</b>:" +
+              "<br>" +
+              "<br>" +
+              "function saludo() {" +
+              "<br>" +
+              "alert('Hola');" +
+              "<br>" +
+              "} " +
+              "<br>" +
+              "saludo(); <i>//para que ejecute, hay que invocar la función</i>";
+          }
+          saludo();
+        </script>
+      </ul>
     </ul>
 
-        <h3>Utilización de operador lógico AND.</h3>
-        <p id="p1">Párrafo 1.</p>
-
-        <h3>Utilización de operador lógico OR.</h3>
-        <p id="p2">Párrafo 2.</p>
-
-        <h3>Utilización de operador lógico NOT.</h3>
-        <p id="p3">Párrafo 3.</p>
-
+    <h3>Guardar la función en una variable.</h3>
+    <ul>
+      <li>
+        Para devolver el conenido de la función, almacenamos la función en una
+        varible y llamamos a esta mostrarlo.
+      </li>
+      <ul>
+        <li id="l2">=>></li>
         <script>
-            var x = 4, y = 2;
-            var resultado1 = (x < 5 && y > 1);
-            var resultado2 = (x > 5 && y > 1);
-
-            document.getElementById("p1").innerHTML =
-                "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-                "=> <b>x < 5 && y > 1</b>: " + resultado1 + "<br>" +
-                "=> <b>x > 5 && y > 1</b>: " + resultado2;
+          function saludo() {
+            alert("Hola");
+          }
+          var resultadoSaludo = saludo;
+          document.getElementById("l2").innerHTML =
+            "Ejemplo de <b>traer función</b>:" +
+            "<br>" +
+            "<br>" +
+            "function saludo() {" +
+            "<br>" +
+            "alert('Hola');" +
+            "<br>" +
+            "} " +
+            "<br>" +
+            "var resultadoSaludo = saludo;" +
+            "<br>" +
+            "<br>" +
+            "-> La llamada <i>alert(resultadoSaludo)</i> trae toda la función:" +
+            "<br>" +
+            resultadoSaludo;
         </script>
-
+      </ul>
+    </ul>
+    <h3>Función con parámetros.</h3>
+    <ul>
+      <li>
+        Se trata de crear una función que contenga parámetros y llamarlos.
+      </li>
+      <ul>
+        <li id="l3">=>></li>
         <script>
-            var x = 4, y = 2;
-            var resultado = (x < 5 || y > 1);
-
-            document.getElementById("p2").innerHTML =
-                "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-                "=> <b>x < 5 || y > 1</b>: " + resultado;
+          function producto(a, b) {
+            return a * b;
+          }
+          producto(3, 4);
+          document.getElementById("l3").innerHTML =
+            "Ejemplo de <b>función con parámetros</b>:" +
+            "<br>" +
+            "<br>" +
+            "function producto(a ,b) {" +
+            "<br>" +
+            "return a * b;" +
+            "<br>" +
+            "} " +
+            "<br>" +
+            "producto(3, 4);" +
+            "<br>" +
+            "<br>" +
+            "-> El resultado de la función <i>producto</i> es: " +
+            producto(3, 4);
         </script>
-
-        <script>
-            var x = 4, y = 2;
-            var resultado = !(x == y);
-
-            document.getElementById("p3").innerHTML =
-                "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-                "=> <b>!(x == y)</b>: " + resultado;
-        </script>
-
-</body>
-
+      </ul>
+    </ul>
+  </body>
 </html>

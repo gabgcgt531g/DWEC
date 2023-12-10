@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Operadores lógicos en Javascript</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Operadores lógicos en Javascript</h1>
 
     <h2>Tipos:</h2>
 
     <ul>
-        <li>AND (&&).</li>
-        <li>OR (||).</li>
-        <li>NOT (!).</li>
+      <li>AND (&&).</li>
+      <li>OR (||).</li>
+      <li>NOT (!).</li>
     </ul>
 
     <h3>Utilización de operador lógico AND.</h3>
@@ -28,34 +27,46 @@
     <p id="p3">Párrafo 3.</p>
 
     <script>
-        var x = 4, y = 2;
-        var resultado1 = (x < 5 && y > 1);
-        var resultado2 = (x > 5 && y > 1);
+      var x = 4,
+        y = 2;
+      var resultado1 = x < 5 && y > 1;
+      var resultado2 = x > 5 && y > 1;
 
-        document.getElementById("p1").innerHTML =
-            "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-            "=> <b>x < 5 && y > 1</b>: " + resultado1 + "<br>" +
-            "=> <b>x > 5 && y > 1</b>: " + resultado2;
+      document.getElementById("p1").innerHTML =
+        "var x = 4, y = 2</i>" +
+        "<br>" +
+        "<br>" +
+        "=> <b>x < 5 && y > 1</b>: " +
+        resultado1 +
+        "<br>" +
+        "=> <b>x > 5 && y > 1</b>: " +
+        resultado2;
     </script>
 
     <script>
-        var x = 4, y = 2;
-        var resultado = (x < 5 || y > 1);
+      var x = 4,
+        y = 2;
+      var resultado = x < 5 || y > 1;
 
-        document.getElementById("p2").innerHTML =
-            "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-            "=> <b>x < 5 || y > 1</b>: " + resultado;
+      document.getElementById("p2").innerHTML =
+        "var x = 4, y = 2</i>" +
+        "<br>" +
+        "<br>" +
+        "=> <b>x < 5 || y > 1</b>: " +
+        resultado;
     </script>
 
     <script>
-        var x = 4, y = 2;
-        var resultado = !(x == y);
+      var x = 4,
+        y = 2;
+      var resultado = !(x == y);
 
-        document.getElementById("p3").innerHTML =
-            "var x = 4, y = 2</i>" + "<br>" + "<br>" +
-            "=> <b>!(x == y)</b>: " + resultado;
+      document.getElementById("p3").innerHTML =
+        "var x = 4, y = 2</i>" +
+        "<br>" +
+        "<br>" +
+        "=> <b>!(x == y)</b>: " +
+        resultado;
     </script>
-
-</body>
-
+  </body>
 </html>

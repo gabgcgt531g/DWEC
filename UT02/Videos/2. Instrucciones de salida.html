@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Instrucciones de salida en Javascript</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Bienvenido a las instrucciones de salida.</h1>
     <p id="miParrafo">Párrafo de prueba.</p>
     <script>
-        window.alert("Hola");
-        document.write("<h2>¿Qué tal?</h2>");
-        //No es recomendable utlizar instrucciones html en script, aunque se puede.
-        document.getElementById("miParrafo").
-            innerHTML = "Cambio de contenido de párrafo";
-        //Este método recomendable solo para pruebas
-        console.log("Solo se ve en la consola del navegador");
+      window.alert("Hola");
+      document.write("<h2>¿Qué tal?</h2>");
+      //No es recomendable utlizar instrucciones html en script, aunque se puede.
+      document.getElementById("miParrafo").innerHTML =
+        "Cambio de contenido de párrafo";
+      //Este método recomendable solo para pruebas
+      console.log("Solo se ve en la consola del navegador");
     </script>
-
-</body>
-
+  </body>
 </html>
