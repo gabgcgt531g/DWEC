@@ -77,6 +77,66 @@
       <br>
       Con la sentencia <i>continue</i>, salta la iteración, que le marca la condición, hasta la siguiente instrucción.
     </ul>
+  </div>
+  <h3>Etiquetas</h3>
+  <div>
+    <ul>
+      <li>
+        <u><b>break en etiquetas</b></u>: preceden a una sentencia con el nombre de la etiqueta, seguido de dos puntos.
+        Si utilizamos varias sentencias en una etiqueta, las englobaremos entre llaves.
+      </li>
+      <br>
+      <i>
+        var animales = ["perro, ", "gato, ", "hamster"];<br>
+        ver_animales: {<br>
+        document.write(animales[0]);<br>
+        document.write(animales[1]);<br>
+        break ver_animales;<br>
+        document.write(animales[2]);<br>
+        }<br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var animales = ["perro ", "gato ", "hamster"];
+        ver_animales: {
+          document.write(animales[0]);
+          document.write(animales[1]);
+          break ver_animales;
+          document.write(animales[2]);
+        }
+      </script>
+      <br>
+      Un <i>break</i> sin etiqueta, debe estar dentro de un bucle o un switch. Si no ponemos etiqueta, falla el código.
+      <br><br>
+      <li>
+        <u><b>continue en etiquetas</b></u>: la etiqueta es opcional y siempre debe estar dentro de un bucle.
+      </li>
+      <br>
+      <i>
+
+        var k; <br>
+        bucle: <br>
+        for (k = 0; k < 10; k++) {<br>
+          if (k == 3 || k == 5) {<br>
+          continue bucle;<br>
+          }<br>
+          document.write(k);<br>
+          }<br>
+      </i>
+      <br>
+      <b>El resultado es</b>:
+      <script>
+        var k;
+        bucle:
+        for (k = 0; k < 10; k++) {
+          if (k == 3 || k == 5) {
+            continue bucle;
+          }
+          document.write(k);
+        }
+      </script>
+
     </ul>
   </div>
 </body>
