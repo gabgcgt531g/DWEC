@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Operadores aritméticos en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Operadores aritméticos en Javascript</h1>
-    <h2>Tipos:</h2>
-    <ul>
-      <li>Suma (+).</li>
-      <li>Resta(-).</li>
-      <li>Multiplicar (*).</li>
-      <li>Dividir (/).</li>
-      <li>Módulo (%).</li>
-      <li>Incremental (++).</li>
-      <li>Decremental (--).</li>
-    </ul>
-    <h3>Utilización de operadores.</h3>
-    <p id="p1">Párrafo 1.</p>
-    <h3>Ejemplo de operadores binarios.</h3>
-    <p id="p2">Párrafo 2.</p>
-    <h3>Ejemplo de operadores unarios.</h3>
-    <p id="p3">Párrafo 3.</p>
-    <script>
-      var x = 5,
-        y = 2;
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Operadores aritméticos en Javascript</title>
+</head>
 
-      var dosNumeros = 1 + 7;
-      var dosVariables = x + y;
-      var numeroVariable = 4 + x;
+<body>
+  <h1>Operadores aritméticos en Javascript</h1>
+  <h2>Tipos:</h2>
+  <div>
+    <li>Suma (+).</li>
+    <li>Resta(-).</li>
+    <li>Multiplicar (*).</li>
+    <li>Dividir (/).</li>
+    <li>Módulo (%).</li>
+    <li>Incremental (++).</li>
+    <li>Decremental (--).</li>
+  </div>
+  <h3>Utilización de operadores.</h3>
+  <p id="p1">Párrafo 1.</p>
+  <h3>Ejemplo de operadores binarios.</h3>
+  <p id="p2">Párrafo 2.</p>
+  <h3>Ejemplo de operadores unarios.</h3>
+  <p id="p3">Párrafo 3.</p>
+  <script>
+    var x = 5,
+      y = 2;
 
-      document.getElementById("p1").innerHTML =
-        "La variable dosNumeros contiene: " +
-        dosNumeros +
-        "<br>" +
-        "La variable dosVariables contiene: " +
-        dosVariables +
-        "<br>" +
-        "La variable numeroVariable contiene: " +
-        numeroVariable;
-    </script>
+    var dosNumeros = 1 + 7;
+    var dosVariables = x + y;
+    var numeroVariable = 4 + x;
 
-    <script>
-      var suma = x + y;
-      var resta = x - y;
-      var multiplicar = x * y;
-      var dividir = x / y;
-      var modulo = x % y;
+    document.getElementById("p1").innerHTML =
+      "La variable dosNumeros contiene: " +
+      dosNumeros +
+      "<br>" +
+      "La variable dosVariables contiene: " +
+      dosVariables +
+      "<br>" +
+      "La variable numeroVariable contiene: " +
+      numeroVariable;
+  </script>
 
-      document.getElementById("p2").innerHTML =
-        "El resultado de la suma: " +
-        suma +
-        "<br>" +
-        "El resultado de la resta: " +
-        resta +
-        "<br>" +
-        "El resultado de la mulitiplicación: " +
-        multiplicar +
-        "<br>" +
-        "El resultado de la división: " +
-        dividir +
-        "<br>" +
-        "El resultado del módulo: " +
-        modulo;
-    </script>
+  <script>
+    var suma = x + y;
+    var resta = x - y;
+    var multiplicar = x * y;
+    var dividir = x / y;
+    var modulo = x % y;
 
-    <script>
-      var a = 8;
-      var b = 12;
+    document.getElementById("p2").innerHTML =
+      "El resultado de la suma: " +
+      suma +
+      "<br>" +
+      "El resultado de la resta: " +
+      resta +
+      "<br>" +
+      "El resultado de la mulitiplicación: " +
+      multiplicar +
+      "<br>" +
+      "El resultado de la división: " +
+      dividir +
+      "<br>" +
+      "El resultado del módulo: " +
+      modulo;
+  </script>
 
-      document.getElementById("p3").innerHTML =
-        "El valor de 'a' es: " +
-        a +
-        ". " +
-        "El resultado del incremento: " +
-        ++a +
-        "<br>" +
-        "El valor de 'b' es: " +
-        b +
-        ". " +
-        "El resultado del decremento: " +
-        --b;
-    </script>
-  </body>
+  <script>
+    var a = 8;
+    var b = 12;
+
+    document.getElementById("p3").innerHTML =
+      "El valor de 'a' es: " +
+      a +
+      ". " +
+      "El resultado del incremento: " +
+      ++a +
+      "<br>" +
+      "El valor de 'b' es: " +
+      b +
+      ". " +
+      "El resultado del decremento: " +
+      --b;
+  </script>
+</body>
+
 </html>

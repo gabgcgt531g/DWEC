@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Integración de Javascript con HTML</title>
-    <script src="1. Integracion Javascript en HTML.js"></script>
-    <script>
-      function desdeHead() {
-        alert("Desde 'head' ");
-      }
-    </script>
-  </head>
 
-  <body>
-    <h1>Bienvenido al curso de Javascript</h1>
-    <script>
-      function holaMundo() {
-        alert("Hola Mundo!");
-      }
-      holaMundo();
-    </script>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Integración de Javascript con HTML</title>
+  <script src="1. Integracion Javascript en HTML.js"></script>
+  <script>
+    function desdeHead() {
+      alert("Desde 'head' ");
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Bienvenido al curso de Javascript</h1>
+  <script>
+    function holaMundo() {
+      alert("Hola Mundo!");
+    }
+    holaMundo();
+  </script>
+  <div>
     <li>
       Dependiendo de donde pongas el script, se ejecutará en orden u otro.
     </li>
@@ -28,16 +30,22 @@
       Tambien puedes declarar la función en el "head" y llamar a la función
       donde quieras.
     </li>
+  </div>
+  <h3>Llamada a función escrita en "head"</h3>
+  <div>
+    <ul>
+      <li>Ejemplo de Javascript en documento propio.</li>
+      <i>desdeHead();</i>
+      <script>
+        desdeHead();
+      </script>
+      <li>Puedes crear un archivo .js y llamar a la función desde HTML.</li>
+      <i>primerScript();</i>
+      <script>
+        primerScript();
+      </script>
+    </ul>
+  </div>
+</body>
 
-    <h2>Llamada a función escrita en "head"</h2>
-    <li>Ejemplo de Javascript en documento propio.</li>
-    <script>
-      desdeHead();
-    </script>
-
-    <li>Puedes crear un archivo .js y llamar a la función desde HTML.</li>
-    <script>
-      primerScript();
-    </script>
-  </body>
 </html>

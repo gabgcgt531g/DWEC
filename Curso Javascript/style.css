@@ -7,10 +7,9 @@ body {
 
 h1 {
   background-color: rgb(42, 42, 42);
-  text-align: center;
-  padding: 0 0;
+  padding: 0 2%;
   top: 0;
-  width: 100%;
+  width: 90%;
   position: relative;
   color: lightcoral;
   font-style: normal;
@@ -21,18 +20,18 @@ h1 {
 h2 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
-  width: 100%;
+  width: 90%;
   position: relative;
   text-align: 5%;
   color: cadetblue;
-  font-size: 30px;
+  font-size: 28px;
   border-radius: 10px;
 }
 
 h3 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
-  width: 100%;
+  width: 90%;
   position: relative;
   color: khaki;
   font-size: 20px;
@@ -41,32 +40,32 @@ h3 {
 
 ul {
   background-color: rgb(42, 42, 42);
-  padding: 1em 5%;
-  width: 100%;
+  padding: 1% 2%;
+  width: 90%;
   position: relative;
   border-radius: 10px;
 }
 
 p {
   background-color: rgb(42, 42, 42);
-  padding: 1em 15px;
-  width: 100%;
+  padding: 1% 2%;
+  width: 90%;
   position: relative;
   border-radius: 10px;
 }
 
 pre {
   background-color: rgb(42, 42, 42);
-  padding: 1em 15px;
-  width: 100%;
+  padding: 1% 2%;
+  width: 90%;
   position: relative;
   border-radius: 10px;
 }
 
 div {
   background-color: rgb(42, 42, 42);
-  padding: 1em 15px;
-  width: 100%;
+  padding: 1% 2%;
+  width: 90%;
   position: relative;
   border-radius: 10px;
 }

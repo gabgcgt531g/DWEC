@@ -1,44 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Comentarios en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Comentarios.</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Comentarios en Javascript</title>
+</head>
 
-    <h3>Comentarios de una sola linea.</h3>
-    <script>
-      //Declaracion de variables
-      var a = 1;
-      var b = 2;
-      var c = a + b;
+<body>
+  <h1>Comentarios.</h1>
 
-      //Llamada a la variable 'c' en un pop up
-      alert(c);
-    </script>
+  <h3>Comentarios de una sola linea.</h3>
+  <p id="p1"></p>
+  <script>
+    //Declaracion de variables
+    var a = 1;
+    var b = 2;
+    var c = a + b;
 
-    <h3>Comentarios en la misma linea.</h3>
-    <script>
-      var c = 3; //Variable a
-      var d = 4; //Variable a
-      var e = c + d; //Variable c
-      alert(e); //Llamada a la variable 'e' en un pop up
-    </script>
+    //Llamada a la variable 'c'
+    document.write = c;
 
-    <h3>Comentarios de varias lineas.</h3>
-    <script>
-      /*
-        Definimos dos variables numéricas
-        Una tercera variable opera con el valor de las anteriores
-        Llamada a la variable 'h' en un pop up
-        */
-      var f = 5;
-      var g = 6;
-      var h = f + g;
-      alert(h);
-    </script>
-  </body>
+    document.getElementById("p1").innerHTML =
+      "Ejemplo de <b>comentarios de una sola línea</b>:<br>" +
+      "//Declaracion de variables<br>" +
+      "var a = 3;<br>" +
+      "var b = 4;<br>" +
+      "var c = a + b;<br><br>" +
+      "//Llamada a la variable 'c'<br>" +
+      "document.write = e;"; 
+  </script>
+
+  <h3>Comentarios en la misma linea.</h3>
+  <p id="p2"></p>
+  <script>
+    var c = 3; //Variable c
+    var d = 4; //Variable d
+    var e = c + d; //Variable e
+    document.write = e; //Llamada a la variable 'e'
+
+    document.getElementById("p2").innerHTML =
+      "Ejemplo de <b>comentarios en la misma línea</b>:<br>" +
+      "var c = 3; //Variable a<br>" +
+      "var d = 4; //Variable d<br>" +
+      "var e = c + d; //Variable e<br><br>" +
+      "document.write = e; //Llamada a la variable 'e' ";
+  </script>
+
+  <h3>Comentarios de varias lineas.</h3>
+  <p id="p3"></p>
+  <script>
+    /*
+      Definimos dos variables numéricas
+      Una tercera variable opera con el valor de las anteriores
+      Llamada a la variable 'h'
+      */
+    var f = 5;
+    var g = 6;
+    var h = f + g;
+    document.write = h;
+
+    document.getElementById("p3").innerHTML =
+      "Ejemplo de <b>comentarios de varias líneas</b>:<br>" +
+      "/*<br>" +
+      "Definimos dos variables numéricas<br>" +
+      "Una tercera variable opera con el valor de las anteriores <br>" +
+      "Llamada a la variable 'h' en un pop up<br>" +
+      "*/<br>" +
+      "var f = 5; //Variable f<br>" +
+      "var g = 6; //Variable g<br>" +
+      "var h = f + g; //Variable h<br><br>" +
+      "document.write = h;";
+  </script>
+</body>
+
 </html>

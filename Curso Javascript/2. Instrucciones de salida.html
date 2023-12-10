@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Instrucciones de salida en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Bienvenido a las instrucciones de salida.</h1>
-    <p id="miParrafo">Párrafo de prueba.</p>
-    <script>
-      window.alert("Hola");
-      document.write("<h2>¿Qué tal?</h2>");
-      //No es recomendable utlizar instrucciones html en script, aunque se puede.
-      document.getElementById("miParrafo").innerHTML =
-        "Cambio de contenido de párrafo";
-      //Este método recomendable solo para pruebas
-      console.log("Solo se ve en la consola del navegador");
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Instrucciones de salida en Javascript</title>
+</head>
+
+<body>
+  <h1>Bienvenido a las instrucciones de salida.</h1>
+  <p id="p1">Párrafo de prueba.</p>
+  <script>
+    window.alert("Hola");
+
+    document.getElementById("p1").innerHTML =
+      "<i>Prueba de instrucción de salida con </i>" +
+      "<b>'window.alert();'</b>";
+  </script>
+  </script>
+  <p id="p2">Párrafo de prueba.</p>
+
+  <script>
+    document.write("<p><i>Prueba de instrucción de salida con </i> <b>'document.write'</b></p>");
+
+    //No es recomendable utlizar instrucciones html en script, aunque se puede.
+    document.getElementById("p2").innerHTML =
+      "<i>Prueba de instrucción de salida con </i> <b>'document.getElementById('id de etiqueta').innerHTML ='</b>";
+
+  </script>
+  <p id="p4">Párrafo de prueba.</p>
+  <script>
+    //Este método recomendable solo para pruebas
+    console.log("Solo se ve en la consola del navegador");
+
+    document.getElementById("p4").innerHTML =
+      "<i>Prueba de instrucción de salida con </i>" +
+      "<b>'console.log();" +
+      "'</b>";
+  </script>
+  </script>
+</body>
+
 </html>

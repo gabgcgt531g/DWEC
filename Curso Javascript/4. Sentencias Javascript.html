@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Sentencias en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Sentencias en Javascript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencias en Javascript</title>
+</head>
 
-    <h3>Punto y coma (;).</h3>
-    <p>Es recomendable que acaben en punto y coma (;).</p>
-    <script>
-      var a = 1;
-      var b = 2;
-      var c = a + b;
-      alert(c);
-    </script>
-
-    <h3>Escritura en la misma linea.</h3>
-    <p>
-      Se pueden poner varias sentencais en la misma línea, separnadolas por
-      punto y coma (;).
-    </p>
+<body>
+  <h1>Sentencias en Javascript</h1>
+  <h3>Tipos</h3>
+  <ul>
+    <li>Punto y coma (;).</li>
+    Es recomendable que las sentencias acaben en punto y coma (;).
+  </ul>
+  <script>
+    var a = 1;
+    var b = 2;
+    var c = a + b;
+    document.write = c;;
+  </script>
+  <ul>
+    <li>Escritura en la misma linea.</li>
+    Se pueden poner varias sentencais en la misma línea, separnadolas por
+    punto y coma (;).
     <script>
       var c = 2;
       var d = 2;
       var c = c + d;
       alert(c);
     </script>
-
-    <h3>Espacios en blanco.</h3>
-    <p>
-      Los espaciones en blanco se ignoran. Se aconsejan en operaciones
-      matemáticas
-    </p>
+  </ul>
+  <ul>
+    <li>Espacios en blanco.</li>
+    Los espaciones en blanco se ignoran. Se aconsejan en operaciones
+    matemáticas
     <script>
       var nombre = "Gabriel";
       alert(nombre);
     </script>
-
-    <h3>Líneas de mas de 80 caracteres</h3>
-    <p>Es recomendable dividir la linea dsepues de un operador.</p>
+  </ul>
+  <ul>
+    <li>Líneas de mas de 80 caracteres.</li>
+    Es recomendable dividir la linea después de un operador.
     <script>
       var apellido = "González Carvajal";
       alert(apellido);
     </script>
-
-    <h3>Bloques de código.</h3>
-    <p>Se agrupan entre llaves.</p>
-    <p>Se utilizan en funciones, bucles, condicinoes, etc.</p>
+  </ul>
+  <ul>
+    <li>Bloques de código.</li>
+    Se agrupan entre llaves.<br>
+    Se utilizan en funciones, bucles, condicinoes, etc.
     <script>
       function hola() {
         alert("Hola");
@@ -57,20 +59,22 @@
       }
       hola();
     </script>
+  </ul>
 
-    <h3>Palabras reservadas (<i>keywords</i>).</h3>
-    <ul>
-      <li>break</li>
-      <li>continue</li>
-      <li>switch</li>
-      <li>for</li>
-      <li>do...while</li>
-      <li>if...else</li>
-      <li>debugger</li>
-      <li>try...catch</li>
-      <li>var</li>
-      <li>function</li>
-      <li>return</li>
-    </ul>
-  </body>
+  <h3>Palabras reservadas (<i>keywords</i>).</h3>
+  <ul>
+    <li>break</li>
+    <li>continue</li>
+    <li>switch</li>
+    <li>for</li>
+    <li>do...while</li>
+    <li>if...else</li>
+    <li>debugger</li>
+    <li>try...catch</li>
+    <li>var</li>
+    <li>function</li>
+    <li>return</li>
+  </ul>
+</body>
+
 </html>

@@ -1,94 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Operadores de tipo en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Operadores de tipo en Javascript</h1>
-    <div>
-      Javascript tiene dos modelos de operadores de tipo, que nos van a permitir
-      comprobar de que tipo es la variable que hemos declcarado. <br />
-      Hay dos tipos:
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Operadores de tipo en Javascript</title>
+</head>
 
-      <ul>
-        <li>
-          <i>typeoff</i>. Nos devuelve el tipo de dato de una variable o dato.
-        </li>
-        <li>
-          <i>instanceof</i>. Nos devuelve true si un objeto es una instacia de
-          otro especificado.
-        </li>
-      </ul>
-    </div>
+<body>
+  <h1>Operadores de tipo en Javascript</h1>
+  <div>
+    Javascript tiene dos modelos de operadores de tipo, que nos van a permitir
+    comprobar de que tipo es la variable que hemos declcarado. <br />
+    Hay dos tipos:
+    <ul>
+      <li>
+        <i>typeoff</i>. Nos devuelve el tipo de dato de una variable o dato.
+      </li>
+      <li>
+        <i>instanceof</i>. Nos devuelve true si un objeto es una instacia de
+        otro especificado.
+      </li>
+    </ul>
+  </div>
 
-    <h2>Ejemplos:</h2>
+  <h2>Ejemplos:</h2>
+  <h3>=>> <i>typeof</i></h3>
+  <p id="p1">Párrafo 1.</p>
 
-    <h3>=>> <i>typeof</i></h3>
-    <p id="p1">Párrafo 1.</p>
+  <h3>=>> <i>instanceof</i></h3>
+  <p id="p2">Párrafo 2.</p>
 
-    <h3>=>> <i>instanceof</i></h3>
-    <p id="p2">Párrafo 2.</p>
+  <script>
+    var cadena = "Gabriel González";
+    var numero = 3.14;
+    var bool = true;
+    var lista = [1, 2, 3, 5];
+    var registro = { nombre: "Gabriel", apellido: "González" };
+    var fecha = new Date();
+    var miFuncion = function miFun() {
+      alert("Hola Mundo!");
+    };
+    var sinDefinir;
+    var vacia = null;
 
-    <script>
-      var cadena = "Gabriel González";
-      var numero = 3.14;
-      var bool = true;
-      var lista = [1, 2, 3, 5];
-      var registro = { nombre: "Gabriel", apellido: "González" };
-      var fecha = new Date();
-      var miFuncion = function miFun() {
-        alert("Hola Mundo!");
-      };
-      var sinDefinir;
-      var vacia = null;
+    document.getElementById("p1").innerHTML =
+      "El tipo de 'cadena' es: " +
+      typeof cadena +
+      "<br>" +
+      "El tipo de 'numero es: " +
+      typeof numero +
+      "<br>" +
+      "El tipo de 'bool' es: " +
+      typeof bool +
+      "<br>" +
+      "El tipo de 'lista' es: " +
+      typeof lista +
+      "<br>" +
+      "El tipo de 'registro' es: " +
+      typeof registro +
+      "<br>" +
+      "El tipo de 'fecha' es: " +
+      typeof fecha +
+      "<br>" +
+      "El tipo de 'miFuncion' es: " +
+      typeof miFuncion +
+      "<br>" +
+      "El tipo de 'sinDefinir' es: " +
+      typeof sinDefinir +
+      "<br>" +
+      "El tipo de 'vacia' es: " +
+      typeof vacia;
+  </script>
 
-      document.getElementById("p1").innerHTML =
-        "El tipo de 'cadena' es: " +
-        typeof cadena +
-        "<br>" +
-        "El tipo de 'numero es: " +
-        typeof numero +
-        "<br>" +
-        "El tipo de 'bool' es: " +
-        typeof bool +
-        "<br>" +
-        "El tipo de 'lista' es: " +
-        typeof lista +
-        "<br>" +
-        "El tipo de 'registro' es: " +
-        typeof registro +
-        "<br>" +
-        "El tipo de 'fecha' es: " +
-        typeof fecha +
-        "<br>" +
-        "El tipo de 'miFuncion' es: " +
-        typeof miFuncion +
-        "<br>" +
-        "El tipo de 'sinDefinir' es: " +
-        typeof sinDefinir +
-        "<br>" +
-        "El tipo de 'vacia' es: " +
-        typeof vacia;
-    </script>
+  <script>
+    var animales = ["perro", "gato", "hamster"];
 
-    <script>
-      var animales = ["perro", "gato", "hamster"];
+    document.getElementById("p2").innerHTML =
+      "La variable 'animales' es instancia de un Array: " +
+      (animales instanceof Array) +
+      "<br>" +
+      "La variable 'animales' es instancia de un Objeto: " +
+      (animales instanceof Object) +
+      "<br>" +
+      "La variable 'animales' es instancia de una cadena: " +
+      (animales instanceof String) +
+      "<br>" +
+      "La variable 'animales' es instancia de un número: " +
+      (animales instanceof Number);
+  </script>
+</body>
 
-      document.getElementById("p2").innerHTML =
-        "La variable 'animales' es instancia de un Array: " +
-        (animales instanceof Array) +
-        "<br>" +
-        "La variable 'animales' es instancia de un Objeto: " +
-        (animales instanceof Object) +
-        "<br>" +
-        "La variable 'animales' es instancia de una cadena: " +
-        (animales instanceof String) +
-        "<br>" +
-        "La variable 'animales' es instancia de un número: " +
-        (animales instanceof Number);
-    </script>
-  </body>
 </html>

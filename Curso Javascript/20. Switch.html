@@ -1,59 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>if...else en Javascript</title>
-  </head>
 
-  <body>
-    <h1>if...else en Javascript</h1>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sentencia Switch en Javascript</title>
+</head>
 
-    <h3>=>></h3>
+<body>
+  <h1>Sentencia Switch en Javascript</h1>
+  <h3>Switch</h3>
+  <div>
     <ul>
-      <li><u>Características</u>:</li>
-      -> Se definen dentro de una función.
-      <br />
-      -> Tienen ámbito local en la función.
-      <br />
-      -> Son accesibles únicamnte desde dentro de la función.
-      <br />
-      -> Podemos declarar variables con el mismo nombre en diferentes funciones.
-      <br />
-      -> La variable local desparece cuando acaba la función.
+      <li>
+        <u>Definición de <b>If</b></u>: se utiliza para hacer diferentes acciones
+        basadas en diferentes condiciones.
+      </li>
+      -> La condición se evalúa una vez. Si hay coincidencias con algún valor,
+      se ejecuta ese bloque.
+      <br>
+      <li><u>Sintaxis de <b>Switch</b></u>:</li>
+      <br>
+      <i>Switch (expresión) { <br />
+        case 1: instrucciónes para el valor 1; <br>
+        >break; <br>
+        case 2: instrucciónes para el valor 2; <br>
+        break; <br>
+        case n: instrucciones para el valor n; <br>
+        break; <br>
+        defautl: instrucción para cuadno no se cumple ningún <b>case</b>;
+        <br />}
+      </i>
       <ul>
         <li id="l1">-> error</li>
+        <br>
+        <li id="l1.1">No cumple con la condición</li>
         <script>
-          function saludar() {
-            var saludo = "Hola!";
+          var nota = window.prompt('Introduce la nota: ');
+          var resul = ("  ");
+
+          switch (nota) {
+            case 0:
+            case 1:
+            case 2:
+            case 3: //Cogerá la primra qeu tenga resultado y un "break" después. 
+            case 4: resul = "Suspenso";
+              break;
+            case 5: resul = "Suficiente";
+              break;
+            case 6:
+            case 7: resul = "Bien";
+              break;
+            case 8:
+            case 9: resul = "Notable";
+              break;
+            case 10: resul = "Sobresaliente";
+              break;
+            default: resul = "No se contempla esa nota";
           }
-          saludar();
+          document.getElementById("l1.1").innerHTML = ("El resultado es: ") + resul;
+
           document.getElementById("l1").innerHTML =
-            "Ejemplo de <b>variables ámbito local</b>:<br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
+            "Ejemplo de <b>condición switch</b>:<br>" +
+            "var nota = window.prompt('Introduce la nota: ');<br>" +
+            "var resul = (' ');<br>" +
+            "switch (nota) {<br>" +
+            "case 0:;<br>" +
+            "case 1:;<br>" +
+            "case 2:;<br>" +
+            "case 3:;<br>" +
+            "case 4: resul = 'Suspenso';<br>" +
+            "break;<br>" +
+            "case 5: resul = 'Suficiente';<br>" +
+            "break;<br>" +
+            "case 6:;<br>" +
+            "case 7: resul = 'Bien';<br>" +
+            "break;<br>" +
+            "case 8:;<br>" +
+            "case 9: resul = 'Notable';<br>" +
+            "break;<br>" +
+            "case 10: resul = 'Sobresaliente';<br>" +
+            "break;<br>" +
+            "default: resul = 'No se contempla esa nota';<br>" +
             "}<br><br>" +
-            "El resultado de saludar(); es " +
-            saludar() +
-            ".<br> =>> No reconoce la variable fuera de la función y no ejecuta ésta.";
+            "document.getElementById('l1.1').innerHTML = ('El resultado es: ') + resul;"
+          "Mostrará el caso que cumpla con la condición y que tenga un break después." +
+            "Si no se cumple ninguna condición, motrará el resultado de <i>default</i>";
         </script>
         <br />
-        <li id="l2">-> error</li>
-        <script>
-          function saludar() {
-            var saludo = "Hola!";
-            return saludo;
-          }
-          document.getElementById("l2").innerHTML =
-            "<b>Solución</b>: llamar a la variable dentro de la función. <br>" +
-            "function saludar() {<br>" +
-            "var saludo = 'Hola!';<br>" +
-            "return saludo;<br>" +
-            "}<br><br>" +
-            "El resultado de <i>saludar();</i> es: " +
-            saludar();
-        </script>
       </ul>
     </ul>
-  </body>
+  </div>
+
+</body>
+
 </html>

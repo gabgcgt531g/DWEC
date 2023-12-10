@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Operadores de cadena en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Operadores de cadena en Javascript</h1>
-    <h2>Tipos:</h2>
-    <ul>
-      <li>Igual (=).</li>
-      <li>Suma igual (+=).</li>
-      <li>Resta igual (-=).</li>
-      <li>Multiplicar igual (*=).</li>
-      <li>Dividir (/=).</li>
-      <li>Módulo igual (%=).</li>
-    </ul>
-    <h3>Utilización de operadores de cadena.</h3>
-    <p id="p1">Párrafo 1.</p>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Operadores de cadena en Javascript</title>
+</head>
 
-    <script>
-      var nombre = "Gabriel";
-      var apellido = "González";
-      var completo = nombre + " " + apellido;
-      var nombre1 = "Gabriel";
-      var completo1 = (nombre1 += " G. Carvajal");
+<body>
+  <h1>Operadores de cadena en Javascript</h1>
+  <h2>Tipos:</h2>
+  <div>
+    <li>Igual (=).</li>
+    <li>Suma igual (+=).</li>
+    <li>Resta igual (-=).</li>
+    <li>Multiplicar igual (*=).</li>
+    <li>Dividir (/=).</li>
+    <li>Módulo igual (%=).</li>
+  </div>
+  <h3>Utilización de operadores de cadena.</h3>
+  <p id="p1">Párrafo 1.</p>
 
-      document.getElementById("p1").innerHTML =
-        "El nombre es: " +
-        nombre +
-        "." +
-        "<br>" +
-        "El apellido es: " +
-        apellido +
-        "." +
-        "<br>" +
-        "==> La suma de ambos es: " +
-        completo +
-        "." +
-        "<br>" +
-        "==> La suma de ambos es utilizando '+=': " +
-        completo1 +
-        ".";
-    </script>
-  </body>
+  <script>
+    var nombre = "Gabriel";
+    var apellido = "González";
+    var completo = nombre + " " + apellido;
+    var nombre1 = "Gabriel";
+    var completo1 = (nombre1 += " G. Carvajal");
+
+    document.getElementById("p1").innerHTML =
+      "El nombre es: " +
+      nombre +
+      "." +
+      "<br>" +
+      "El apellido es: " +
+      apellido +
+      "." +
+      "<br>" +
+      "==> La suma de ambos es: " +
+      completo +
+      "." +
+      "<br>" +
+      "==> La suma de ambos es utilizando '+=': " +
+      completo1 +
+      ".";
+  </script>
+</body>
+
 </html>

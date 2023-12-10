@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Funciones. Parámetros y argumentos en Javascript</title>
-  </head>
 
-  <body>
-    <h1>Funciones. Parámetros y argumentos en Javascript</h1>
-    <h3>Definición y tipos de parámetros y argumentos.</h3>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Funciones en Javascript. Parámetros y argumentos.</title>
+</head>
+
+<body>
+  <h1>Funciones en Javascript. Parámetros y argumentos.</h1>
+  <h2>Definición y tipos de parámetros y argumentos.</h2>
+  <div>
     <ul>
       <li>
         <u>Parámetros</u>: son los nombres que aparecen en la definición de una
@@ -19,78 +21,86 @@
       -> No se verifican los tipos de los argumentos.
       <br />
       -> No se compruea le número de los argumentos recibidos.
-      <ul>
-        <li>
-          Parámetros por defecto: cuando llamamos a una función con menos
-          argumentos de los declarados. Los valores que faltan no están
-          definidos.
-        </li>
-        <ul>
-          <li id="l1">-> error</li>
-          <script>
-            function suma(a, b) {
-              return a + b;
-            }
-            var resultado = suma(4);
-            document.getElementById("l1").innerHTML =
-              "Ejemplo de <b>parámetros por defecto</b> sin pasarle un parámetro:<br>" +
-              "function suma(a, b) {<br>" +
-              "return a + b;<br>" +
-              "}<br><br>" +
-              "var resultado = suma(4); //El resultado es " +
-              resultado +
-              " (<i>Not a Number</i>)<br><br>";
-          </script>
-          <li id="l2">-> error</li>
-          <script>
-            function suma1(a, b) {
-              if (b === undefined) b = 0;
-              return a + b;
-            }
-            var resultado1 = suma1(4);
-            document.getElementById("l2").innerHTML =
-              "<b>Solución de parámetros por defecto</b> sin pasarle un parámetro:<br>" +
-              "function suma1(a, b) {<br>" +
-              "if (b === undefined) b = 0;{<br>" +
-              "return a + b;<br>" +
-              "}<br><br>" +
-              "var resultado = suma1(4); //El resultado es " +
-              resultado1;
-          </script>
-        </ul>
-        <li>
-          Parámetros por exceso: cuando llamamos a una función con mas
-          argumentos de los que ha sido declarada. Los valores pueden capturarse
-          a través de un objeto (incluido en la función) llamado
-          <i>arguments</i>.
-        </li>
-        <ul>
-          <li id="l3">-> error</li>
-          <script>
-            function valores() {
-              alert("El número de argumentos es: " + arguments.length);
-              for (var i = 0; i < arguments.length; i++) {
-                alert("Arguemento " + i + " = " + arguments[i]);
-              }
-            }
-
-            valores(4, 6, 8, 2, 7, 5);
-
-            document.getElementById("l3").innerHTML =
-              "<b>Ejemplo de parámetros por exceso</b>:<br>" +
-              "function valores() {<br>" +
-              "alert('El número de argumentos es: ' + arguments.length);<br>" +
-              "for (var i = 0; i < arguments.length; i++) {<br>" +
-              "alert('Argumento ' + i + ' = ' + arguments[i]);<br>" +
-              "}<br>" +
-              "}<br><br>" +
-              "valores(4, 6, 8, 2, 7, 5); //El resultado es se mostrará en pop ups";
-          </script>
-        </ul>
-      </ul>
       <li>
-        <u>Argumentos</u>: son los valores que pasamos a (y recibe) una función.
+        <u>Argumentos</u>: son los valores que pasamos (y recibe) a una función.
       </li>
+  </div>
+  <h3>Parámetros por defecto.</h3>
+  <div>
+    <ul>
+      <li>
+        Parámetros por defecto: cuando llamamos a una función con menos
+        argumentos de los declarados. Los valores que faltan no están
+        definidos.
+      </li>
+      <ul>
+        <li id="l1">-> error</li>
+        <script>
+          function suma(a, b) {
+            return a + b;
+          }
+          var resultado = suma(4);
+          document.getElementById("l1").innerHTML =
+            "Ejemplo de <b>parámetros por defecto</b> sin pasarle un parámetro:<br>" +
+            "function suma(a, b) {<br>" +
+            "return a + b;<br>" +
+            "}<br><br>" +
+            "var resultado = suma(4); //El resultado es " +
+            resultado +
+            " (<i>Not a Number</i>)<br><br>";
+        </script>
+        <li id="l2">-> error</li>
+        <script>
+          function suma1(a, b) {
+            if (b === undefined) b = 0;
+            return a + b;
+          }
+          var resultado1 = suma1(4);
+          document.getElementById("l2").innerHTML =
+            "<b>Solución de parámetros por defecto</b> sin pasarle un parámetro:<br>" +
+            "function suma1(a, b) {<br>" +
+            "if (b === undefined) b = 0;{<br>" +
+            "return a + b;<br>" +
+            "}<br><br>" +
+            "var resultado = suma1(4); //El resultado es " +
+            resultado1;
+        </script>
+      </ul>
+  </div>
+  <h3>Parámetros por exceso.</h3>
+  <div>
+    <ul>
+      <li>
+        Parámetros por exceso: cuando llamamos a una función con mas
+        argumentos de los que ha sido declarada. Los valores pueden capturarse
+        a través de un objeto (incluido en la función) llamado
+        <i>arguments</i>.
+      </li>
+      <ul>
+        <li id="l3">-> error</li>
+        <script>
+          function valores() {
+            alert("El número de argumentos es: " + arguments.length);
+            for (var i = 0; i < arguments.length; i++) {
+              alert("Arguemento " + i + " = " + arguments[i]);
+            }
+          }
+
+          valores(4, 6, 8, 2, 7, 5);
+
+          document.getElementById("l3").innerHTML =
+            "<b>Ejemplo de parámetros por exceso</b>:<br>" +
+            "function valores() {<br>" +
+            "alert('El número de argumentos es: ' + arguments.length);<br>" +
+            "for (var i = 0; i < arguments.length; i++) {<br>" +
+            "alert('Argumento ' + i + ' = ' + arguments[i]);<br>" +
+            "}<br>" +
+            "}<br><br>" +
+            "valores(4, 6, 8, 2, 7, 5); //El resultado es se mostrará en pop ups";
+        </script>
+      </ul>
     </ul>
-  </body>
+  </div>
+</body>
+
 </html>
