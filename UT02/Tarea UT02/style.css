@@ -12,7 +12,6 @@ h1 {
   top: 0;
   position: relative;
   color: lightcoral;
-  font-style: normal;
   font-size: 35px;
   border-radius: 8px;
 }
@@ -21,7 +20,6 @@ h2 {
   background-color: rgb(42, 42, 42);
   padding: 0 2%;
   position: relative;
-  text-align: 5%;
   color: cadetblue;
   font-size: 28px;
   border-radius: 8px;
@@ -62,4 +60,16 @@ main {
   padding: 1% 2%;
   position: relative;
   border-radius: 8px;
+}
+
+script {
+  font-size: 14px;
+}
+
+.scrpt {
+  font-weight: 200;
+}
+
+#first {
+  font-style: italic;
 }
