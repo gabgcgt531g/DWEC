@@ -1,9 +1,42 @@
 var numTabla = window.prompt("Introduce el número de la tabla entre el 0 y el 10");
 var i = 1;
-var res = numTabla + i;
 
 
-if (numTabla % 3 == 0) {
+switch (numTabla) {
+    case 2:
+    case 4:
+    case 8:
+        for (; i <= 10 && i >= 1;) {
+            document.write(numTabla + " x " + i + " = " + (numTabla * i) + " <br>");
+            i++
+        }
+        break;
+    case 3:
+    case 6:
+    case 9:
+        while (i <= 10 && i >= 1) {
+            var res = numTabla + i;
+            document.write(numTabla + " + " + i + " = " + (numTabla + i) + " <br>");
+            i++
+        }
+        break;
+    case 1:
+    case 5:
+    case 7:
+    case 10:
+        do {
+            document.write(numTabla + " x " + i + " = " + (numTabla / i) + "<br>");
+            i++;
+        } while (i <= 10);
+        break;
+
+    default: "El número no es entre el 1 y el 10"
+}
+
+
+
+
+/*if (numTabla % 3 == 0) {
     while (i <= 10 && i >= 1) {
         var res = numTabla + i;
         document.write(numTabla + " + " + i + " = " + (res) + " <br>");
@@ -17,7 +50,7 @@ if (numTabla % 3 == 0) {
     }
 } else {
     document.write("--")
-}
+}*/
 
 
 
