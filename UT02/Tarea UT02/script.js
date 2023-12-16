@@ -9,7 +9,7 @@ switch (numTabla) {
     case 8:
         let i = 1;
         for (; i <= 10 && i >= 1;) {
-            document.write(numTabla + " x " + i + " = " + (parseInt(numTabla * i)) + " <br>");
+            document.write(numTabla + " x " + i + " = " + (parseInt(numTabla * (i << 1))) + " <br>");
             i++
 
         }
