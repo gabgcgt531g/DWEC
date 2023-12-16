@@ -1,95 +1,40 @@
-var numTabla = window.prompt("Introduce el número de la tabla entre el 0 y el 10");
-var i = 1;
+//Pide número
+var numTabla = parseInt(prompt("Introduce un número entre el 1 y el 10"));
 
-
+//Según el número elige un caso
 switch (numTabla) {
+    // En los casos 2, 4 y 8, suma el multiplica por números del 1 al 10
     case 2:
     case 4:
     case 8:
+        let i = 1;
         for (; i <= 10 && i >= 1;) {
-            document.write(numTabla + " x " + i + " = " + (numTabla * i) + " <br>");
+            document.write(numTabla + " x " + i + " = " + (parseInt(numTabla * i)) + " <br>");
             i++
+
         }
         break;
+    // En los casos 3, 6 y 9, suma el número por números del 1 al 10
     case 3:
     case 6:
     case 9:
-        while (i <= 10 && i >= 1) {
-            var res = numTabla + i;
-            document.write(numTabla + " + " + i + " = " + (numTabla + i) + " <br>");
-            i++
+        let j = 1;
+        while (j <= 10 && j >= 1) {
+            document.write(numTabla + " + " + j + " = " + (parseInt(numTabla + j)) + " <br>");
+            j++
         }
         break;
     case 1:
     case 5:
     case 7:
     case 10:
+        let k = 1;
         do {
-            document.write(numTabla + " x " + i + " = " + (numTabla / i) + "<br>");
-            i++;
-        } while (i <= 10);
+            document.write(numTabla + " / " + k + " = " + (parseFloat(numTabla / k)) + "<br>");
+            k++;
+        } while (k <= 10);
         break;
 
-    default: "El número no es entre el 1 y el 10"
+    default:
+        let mensaje = numTabla.toString("NOOOOOO! Melón, entre el 1 y el 10");
 }
-
-
-
-
-/*if (numTabla % 3 == 0) {
-    while (i <= 10 && i >= 1) {
-        var res = numTabla + i;
-        document.write(numTabla + " + " + i + " = " + (res) + " <br>");
-        i++
-    }
-
-} else if (numTabla == 2 || numTabla == 4 || numTabla) {
-    for (; i <= 10 && i >= 1;) {
-        document.write(numTabla + " x " + i + " = " + (numTabla * i) + " <br>");
-        i++
-    }
-} else {
-    document.write("--")
-}*/
-
-
-
-/*if (numTabla == 2 || numTabla == 4 || numTabla) {
-    document.write("Tabla del " + numTabla + " utilizando operadores artiméticos:<br><br>");
-    for (; i <= 10 && i >= 1;) {
-        document.write(numTabla + " x " + i + " = " + (numTabla * i) + " <br>");
-        i++
-    }
-} else */
-
-/*
-var numTabla = window.prompt("Introduce el número de la tabla entre el 0 y el 10 ")
-if (numTabla > 10 || numTabla < 0) {
-    document.write("¡El valor debe ser entre 0 y 10!");
-} else {
-    document.write(numTabla + " x " + i + " = " + (numTabla * i) + "<br>");
-    i++;
-}
-
-else if (numTabla <= 10 && numTabla >= 1) {
-    document.write("La tabla de multiplicar del " + numTabla + " es: <br>");
-    do {
-        document.write(numTabla + " x " + i + " = " + (numTabla / i) + "<br>");
-        i++;
-    } while (i <= 10);
-} else {
-    document.write("El numero es erróneo")
-}
-
-
-let tabla = "La tabla del " + numTabla + " es:<br> <br>";
-document.write(tabla);
-
-do {
-    
-    document.write(numTabla + " x " + i + " = " + (numTabla * i) + "<br>");
-    i++;
-
-} while (i <= 10);
-document.write("<br>¡FIN DE LA TABLA DEL " + numTabla + "!");
-*/
