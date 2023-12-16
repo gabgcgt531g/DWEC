@@ -34,7 +34,5 @@ switch (numTabla) {
             k++;
         } while (k <= 10);
         break;
-
-    default:
-        let mensaje = numTabla.toString("NOOOOOO! Melón, entre el 1 y el 10");
+    default: alert("NOOOOOOO!! Solo números entre el 1 y el 10");
 }
