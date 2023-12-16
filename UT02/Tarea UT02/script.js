@@ -30,7 +30,7 @@ switch (numTabla) {
         } while (i <= 10);
         break;
 
-    default: "El número no es entre el 1 y el 10"
+    default: document.write("El número no es entre el 1 y el 10");
 }
 
 
