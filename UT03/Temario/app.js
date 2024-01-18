@@ -1,16 +1,37 @@
 // app.js
 
-// Obtener referencia al elemento con el id "titulo"
-var tituloElemento = document.getElementById("titulo");
+// Función para agregar una nueva tarea
+function agregarTarea() {
+  // Obtener el valor del input de nueva tarea
+  var nuevaTareaTexto = document.getElementById("nuevaTarea").value;
 
-// Cambiar el contenido del elemento
-tituloElemento.innerHTML = "¡Hola, DOM modificado!";
+  // Validar que el campo no esté vacío
+  if (nuevaTareaTexto.trim() === "") {
+    alert("Por favor, ingresa una tarea válida");
+    return;    
+  }
 
-// Función para cambiar el texto del párrafo
-function cambiarTexto() {
-  // Obtener referencia al elemento con el id "parrafo"
-  var parrafoElemento = document.getElementById("parrafo");
+  // Crear un nuevo elemento de lista (li)
+  var nuevaTareaElemento = document.createElement("li");
 
-  // Cambiar el contenido del párrafo
-  parrafoElemento.innerHTML = "Texto cambiado por JavaScript.";
+  // Establecer el texto del nuevo elemento
+  nuevaTareaElemento.textContent = nuevaTareaTexto;
+
+  // Agregar la nueva tarea a la lista
+  document.getElementById("listaTareas").appendChild(nuevaTareaElemento);
+
+  // Limpiar el campo de nueva tarea después de agregarla
+  document.getElementById("nuevaTarea").value = "";
+
+  // Se ejecuta cuando se añade una tarea
+  const browserVersion = navigator.appVersion;
+  console.log("Versión del navegador:", browserVersion);
+  const userLanguage = navigator.language;
+  console.log("Idioma del navegador:", userLanguage);
+  const userAgent = navigator.userAgent;
+  console.log("Agente de usuario:", userAgent);
+  
+
 }
+
+// Puedes agregar más funcionalidades como marcar tareas como completadas, eliminar tareas, etc.
