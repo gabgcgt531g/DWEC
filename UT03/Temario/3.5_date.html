@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Objeto date</title>
+</head>
+
+<body>
+
+  <p id="p1">Párrafo 1.</p>
+  <p id="p2">Párrafo 2.</p>
+  <p id="p3">Párrafo 3.</p>
+  <p id="p4">Párrafo 4.</p>
+  <p id="p5">Párrafo 5.</p>
+
+  <script>
+    let d = new Date();
+
+    document.getElementById("p1").innerHTML = d.getFullYear();
+    document.getElementById("p2").innerHTML = d.toDateString();
+    document.getElementById("p3").innerHTML = d.getUTCDate();
+
+    let d2 = new Date(5, 28, 2011, 22, 58);
+    document.getElementById("p4").innerHTML = d2.setMonth(0);
+    document.getElementById("p5").innerHTML = d.setFullYear(2020);
+  </script>
+
+</body>

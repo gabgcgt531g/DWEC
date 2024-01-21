@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Constructores integrados</title>
+</head>
+
+<body>
+  <h1>Constructores integrados en Javascript</h1>
+  <h2>Definición de Objetos.</h2>
+  <div>
+    <u><b>Objetos con homólogo primitivo</b></u>: nos permite construir cadenas. Al tener un dato primitivo
+    <i>String</i> no es recomendable utilizarlo como objeto.
+    <br>
+    Esto se puede aplicar también para <i>Number</i> o <i>Boolean</i> por la misma razón.
+  </div>
+  <h3>Tipo <i>Array</i></h3>
+  <div>
+    <li class="lista">let x = new Array();</li>
+    <li class="lista">let x = [];</li>
+  </div>
+  <h3>Tipo <i>RegExp</i></h3>
+  <div>
+    <li class="lista">let x = new RegExp();</li>
+    <li class="lista">let x = /()/;</li>
+  </div>
+  <h3>Tipo <i>Function</i></h3>
+  <div>
+    <li class="lista">let x = new Function();</li>
+    <li class="lista">function();</li>
+  </div>
+  <h3>Tipo <i>Date</i></h3>
+  <div>
+    <li class="lista">let x = new Date();</li>
+  </div>
+  <h3>Tipo <i>Math</i></h3>
+  <div>
+    No se puede declarar con <i>new</i> el objeto <i>Math</i> porque es un objeto global. <br>
+    Para llamarlo, ponermos <i>math.<b>nombreExpresion</b></i>.
+  </div>
+  <h3>Tipo <i>Object</i></h3>
+  <div>
+    <li class="lista">let x = {};</li>
+  </div>
+
+
+</body>
+
+</html>
