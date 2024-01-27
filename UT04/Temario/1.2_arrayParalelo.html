@@ -22,8 +22,17 @@
 </body>
 <script>
   var profesores = ["Cristina", "Catalina", "Vieites", "Benjamin"];
-  var asignaturas = ["Seguridad", "Bases de Datos", "Sistemas Informáticos", "Redes"];
+  var asignaturas = ["Ciberseguridad", "Bases de Datos", "Sistemas Informáticos", "Redes"];
   var alumnos = [24, 17, 28, 26];
+
+  function imprimeDatos(indice) {
+    document.write("<br/>" + "=>> " + profesores[indice] + " del módulo de " +
+      asignaturas[indice] + ", tiene " + alumnos[indice] + " alumnos en clase.");
+  }
+
+  for (i = 0; i < profesores.length; i++) {
+    imprimeDatos(i);
+  }
 
 </script>
 
