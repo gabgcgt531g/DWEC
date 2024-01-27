@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    //-> Crear un array.
+    //Se puede almacenar un conjunto de datos como variables independientes
+    var coche1 = "Seat";
+    var coche2 = "BMW";
+    var coche3 = "Audi";
+    var coche4 = "Toyota";
+
+    //Se puede alamecenar un conjunto de datos en un array
+    var misCoches = new Array();
+    misCoches[0] = "Seat";
+    misCoches[1] = " BMW";
+    misCoches[2] = " Audi";
+    misCoches[3] = " Toyota";
+
+    document.write(misCoches + "<br>"); //Muestra todo el array
+    document.write(misCoches.length + "<br>"); //Muestra el tamaño del array
+    document.write(misCoches[3] + "<br>"); //Muestra la posición 4 del array
+    document.write(misCoches[4] + "<br>"); //El array empieza desde el cero
+
+    //-> Redimensionar arrays
+    //Se puede reajustar el tamaño de un array después de crearlo
+    var personas = new Array(40);
+
+    //En la posición 54, que no existía, asinamos un valor
+    personas[53] = "Irene Sáinz Veiga";
+    var longitud = personas.length;
+
+    document.write(longitud + "<br>"); //Muestra 54.
+
+    //-> Asignar valores en un array.
+    //Se puede asinar de dos maneras:
+    //Valor por valor.
+    sistemaSolar = new Array();
+    sistemaSolar[0] = "Mercurio";
+    sistemaSolar[1] = "Venus";
+    sistemaSolar[2] = "Tierra";
+    sistemaSolar[3] = "Marte";
+    sistemaSolar[4] = "Jupiter";
+    sistemaSolar[5] = "Saturno";
+    sistemaSolar[6] = "Urano";
+    sistemaSolar[7] = "Neptuno";
+
+    unPlaneta = sistemaSolar[2]; // almacenará en unPlaneta la cadena "Tierra".
+    document.write(unPlaneta + "<br>");
+
+    //Con el constructor sin aportar las posiciones
+    sistemaSolar1 = new Array("Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno");
+
+    document.write(sistemaSolar1[5] + "<br>");
+    document.write(sistemaSolar1.length + "<br>");
+
+
+    //Con corchetes, sustituyendo al constructor new Array()
+    sistemaSolar2 = ["Mercurio", "Venus", "Tierra", "Marte", "Jupiter", "Saturno", "Urano", "Neptuno"];
+
+    document.write(sistemaSolar2[4] + "<br>");
+    console.log("El sistema solar tiene " + sistemaSolar2.length + " planetas");
+
+    //-> Array mixto
+    var datos = { "numero": 42, "mes": "Junio", "hola": "mundo", 69: "96" };
+
+    document.write("<br/>" + datos["numero"] + " -- " + datos["mes"] + " -- " + datos["hola"] + " -- " + datos[69] + "<br/>");
+    console.log("El número: " + datos["numero"] + ", el mes: " + datos["mes"] + ", el lugar: " + datos["hola"]);
+
+    //-> Recorrer array
+    //Con el bucle for
+    document.write("<br/>" + "-> Recorrer con bucle for:" + "<br/>");
+    for (i = 0; i < sistemaSolar.length; i++) {
+      document.write(sistemaSolar[i] + "<br/>");
+    }
+
+    //Con el bucle while
+    document.write("<br/>" + "-> Recorrer con bucle while:" + "<br/>");
+    var i = 0;
+    while (i < sistemaSolar.length) {
+      document.write(sistemaSolar[i] + "<br/>");
+      i++;
+    }
+
+    //Con el bucle foreach
+    document.write("<br/>" + "-> Recorrer con bucle foreach:" + "<br/>");
+    sistemaSolar.forEach(function (planeta) {
+      document.write(planeta + "<br/>");
+    });
+
+    //Otro modo con el bucle foreach
+    document.write("<br/>" + "-> Otro modo con el bucle foreach:" + "<br/>");
+    sistemaSolar.forEach(function (planeta, indice) {
+      document.write("Índice: " + indice + ", Planeta: " + planeta + "<br/>");
+    });
+
+    //-> Borrar partes de un array
+    document.write("<br/>" + "=>> Borrado de elementos de un array:" + "<br/>");
+    sistemaSolar4 = new Array();
+    sistemaSolar4[0] = "Mercurio";
+    sistemaSolar4[1] = "Venus";
+    sistemaSolar4[2] = "Tierra";
+    sistemaSolar4[3] = "Marte";
+    sistemaSolar4[4] = "Jupiter";
+    sistemaSolar4[5] = "Saturno";
+    sistemaSolar4[6] = "Urano";
+    sistemaSolar4[7] = "Neptuno";
+
+    document.write("-> Longitud array: " + sistemaSolar4.length + "<br/>");
+    sistemaSolar4.forEach(function (planeta, indice) {
+      document.write("Indice" + " " + indice + ": " + planeta + "<br/>");
+    });
+
+    delete sistemaSolar4[4];
+    document.write("<br/>-> La longitud del array sigue siendo: " + sistemaSolar4.length + ", pero ha desparecido el valor del índice 4" + "<br/>");
+    sistemaSolar4.forEach(function (planeta, indice) {
+      document.write("Indice" + " " + indice + ": " + planeta + "<br/>");
+    });
+    //Error al tratar de mostrar el elemento borrado
+    document.write("Si tratamos de mostralo no dará un valor undefined <br/>");
+    document.write("document.write(sistemaSolar4[4]) -> ");
+    document.write(sistemaSolar4[4] + "<br/>");
+
+    //-> Reducir el tamaño después de borrar un elemento de un array
+    document.write("<br/>-> Para reducir el tamaño del array se utiliza <b> splice</b>: <br/>");
+    sistemaSolar4.splice(4, 1);
+    document.write("sistemaSolar4.splice(4,3)");
+
+    document.write("<br/>-> La longitud del array ahora es: " + sistemaSolar4.length + "<br/>");
+    sistemaSolar4.forEach(function (planeta, indice) {
+      document.write("Indice" + " " + indice + ": " + planeta + "<br/>");
+    });
+
+    //-> Método reverse()
+    document.write("<br/>-> Método reverse(): <br/>");
+    var frutas = ["Plátano", "Naranja", "Manzana", "Melocotón"];
+    document.write(frutas.reverse() + "<br/>");
+
+    //-> Método slice()
+    document.write("<br/>-> Método slice(): <br/>");
+    var frutas = ["Plátano", "Naranja", "Manzana", "Melocotón"];
+    document.write(frutas.slice(0, 1) + "<br />");
+    document.write(frutas.slice(1) + "<br />");
+    document.write(frutas.slice(-2) + "<br />");
+    document.write(frutas + "<br />");
+
+
+
+
+
+
+
+
+  </script>
+  <script>
+
+  </script>
+
+</body>
+
+</html>

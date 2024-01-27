@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 200;
+      font-size: 14px;
+    }
+  </style>
+
+<body>
+
+  <script type="text/javascript">
+
+    var datos = new Array();
+    datos[0] = new Array("Cristina", "Seguridad", 24);
+    datos[1] = new Array("Catalina", "Bases de Datos", 17);
+    datos[2] = new Array("Vieites", "Sistemas Informáticos", 28);
+    datos[3] = new Array("Benjamin", "Redes", 26);
+
+    var datos = [
+      ["Cristina", "Seguridad", 24],
+      ["Catalina", "Bases de Datos", 17],
+      ["Vieites", "Sistemas Informáticos", 28],
+      ["Benjamin", "Redes", 26]
+    ];
+
+    document.write("<br/>Quien imparte Bases de Datos? " + datos[1][0]); // Catalina
+    document.write("<br/>Asignatura de Vieites: " + datos[2][1]);        // Sistemas Informaticos
+    document.write("<br/>Alumnos de Benjamin: " + datos[3][2]);          // 26
+
+    for (i = 0; i < datos.length; i++) {
+      document.write("<br/>" + datos[i][0] + " del módulo de " + datos[i][1] + ", tiene " + datos[i][2] + " alumnos en clase.");
+    }
+
+    document.write("<table border=1>");
+    for (i = 0; i < datos.length; i++) {
+      document.write("<tr>");
+      for (j = 0; j < datos[i].length; j++) {
+        document.write("<td>" + datos[i][j] + "</td>");
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+
+
+
+  </script>
+
+</body>
+
+</html>
