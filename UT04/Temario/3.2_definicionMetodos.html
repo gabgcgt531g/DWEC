@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    p {
+      margin: 10px;
+      padding: 10px;
+      padding-bottom: 15px;
+      background-color: rgb(73, 73, 73);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <script>
+      function rellenarDeposito(litros) {
+        this.cantidad = litros;
+      }
+
+      function Coche(nombre, marca, combustible) {
+        // Propiedades
+        this.nombre = nombre;
+        this.marca = marca;
+        this.combustible = combustible;
+        this.cantidad = 0;// Cantidad de combustible en el depósito.
+        // Métodos
+        this.rellenarDeposito = rellenarDeposito;
+      }
+
+      var cocheDeMartin = new Coche("Martin", "BMW", "eléctrico");
+
+      cocheDeMartin.marca = "Ferrari Testarrosa";
+      cocheDeMartin.combustible = "gasolina";
+
+      document.write("El coche de " + cocheDeMartin.nombre + " es de marca " + cocheDeMartin.marca + " y el combustible que usa es " + cocheDeMartin.combustible + "<br/>");
+    </script>
+  </p>
+  <p>
+    <script>
+      cocheDeMartin.rellenarDeposito(35);
+
+      document.write("El coche de " + cocheDeMartin.nombre + " tiene " + cocheDeMartin.cantidad + " litros de " + cocheDeMartin.combustible + " en el depósito.");
+    </script>
+  </p>
+  <p>
+    <script>
+      // Se pueden definir la función dentro de constructor del método
+      function Coche(nombre, marca, combustible) {
+        // Propiedades
+        this.nombre = nombre;
+        this.marca = marca;
+        this.combustible = combustible;
+        this.cantidad = 0;
+        // Métodos
+        this.rellenarDeposito = function (litros) {
+          this.cantidad = litros;
+        };
+      }
+      var cocheRamon = new Coche("Ramon", "Volvo", "híbrido");
+      cocheRamon.rellenarDeposito(40);
+
+      document.write("El coche de " + cocheRamon.nombre + " es de marca " + cocheRamon.marca + " y el combustible que usa es " + cocheRamon.combustible + ". Tiene capacidad para " + cocheRamon.cantidad + " litros.");
+    </script>
+  </p>
+  <p>
+    <script>
+      // Se pueden definir funciones que afeten a todos los métodos con "prototipos"
+      function Coche(nombre, marca, combustible) {
+        // Propiedades
+        this.nombre = nombre;
+        this.marca = marca;
+        this.combustible = combustible;
+      }
+      // Métodos
+      Coche.prototype.rellenarDeposito = function (litros) {
+        this.cantidad = litros;
+      };
+
+      var cocheOslo = new Coche("Oslo", "Peugeot", "gasoil");
+      cocheOslo.rellenarDeposito(60);
+
+      document.write("El coche de " + cocheOslo.nombre + " es de marca " + cocheOslo.marca + " y el combustible que usa es " + cocheOslo.combustible + ". Tiene capacidad para " + cocheOslo.cantidad + " litros.");
+    </script>
+  </p>
+</body>
+
+</html>

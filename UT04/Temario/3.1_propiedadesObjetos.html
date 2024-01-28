@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    p {
+      margin: 10px;
+      padding: 10px;
+      padding-bottom: 15px;
+      background-color: rgb(73, 73, 73);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <script>
+      function Coche(nombre, marca, combustible) {
+        // Propiedades
+        this.nombre = nombre;
+        this.marca = marca;
+        this.combustible = combustible;
+        this.cantidad = 0;// Cantidad de combustible en el depósito.
+      }
+      var cocheDeMartin = new Coche("Martin", "BMW", "electricidad");
+      document.write("El coche de " + cocheDeMartin.nombre + " es de marca " + cocheDeMartin.marca + " y el combustible que usa es " + cocheDeMartin.combustible + "<br/>");
+      var cocheDeSilvia = new Coche("Silvia", "Seat", "gasolina");
+      document.write("El coche de " + cocheDeSilvia.nombre + " es de marca " + cocheDeSilvia.marca + " y el combustible que usa es " + cocheDeSilvia.combustible + "<br/>");
+
+    </script>
+  </p>
+  <p>
+    <script>
+      //Se puede modifcar los atributos, despues de declarar el objeto.
+      cocheDeMartin.marca = "Ferrari Testarrosa";
+      cocheDeMartin.combustible = "gasolina";
+      document.write("El coche de " + cocheDeMartin.nombre + " es de marca " + cocheDeMartin.marca + " y el combustible que usa es " + cocheDeMartin.combustible + "<br/>");
+    </script>
+  </p>
+</body>
+
+</html>
