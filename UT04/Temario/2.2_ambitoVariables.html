@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // Uso de variables locales y globales no muy recomendable, ya que estamos empleando el mismo nombre de variable en global y en local.
+    var chica = "Aurora";           // variable global
+    var perros = "Lacky, Samba y Ronda";       // variable global
+    function demo() {
+      //Definimos una variable local (fíjate que es obligatorio para las variables locales usar var)
+      //Esta variable local tendrá el mismo nombre que otra variable global pero con distinto contenido.
+      // Si no usáramos var estaríamos modificando la variable global chica.
+      var chica = "Raquel";     // variable local
+      document.write("<br/>" + perros + "  no pertenecen a " + chica + ".");
+    }
+    // Llamamos a la función para que use las variables locales.
+    demo();
+    //  Utilizamos las variables globales definidas al comienzo.
+    document.write("<br/>" + perros + "  pertenecen a " + chica + ".");
+
+  </script>
+</body>
+
+</html>

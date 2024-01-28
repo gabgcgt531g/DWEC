@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function hipotenusa(a, b) {
+      function cuadrado(x) {
+        return x * x;
+      }
+      return Math.sqrt(cuadrado(a) + cuadrado(b));
+    }
+    document.write("<br/>La hipotenusa de 4 y 7 es: " + hipotenusa(4, 7));
+    // Imprimirá: La hipotenusa de 1 y 2 es: 2.23606797749979
+
+  </script>
+</body>
+
+</html>

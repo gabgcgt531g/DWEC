@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3b3b3b;
+      color: rgb(254, 254, 247);
+      font-family: 'JetBrains Mono';
+      font-weight: 300;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.write("=>> Función que le damos parámetros en la llamada. <br/>");
+    function saludar(a, b) {
+      document.write("Hola " + a + " y " + b + ".<br/>");
+    }
+
+    saludar("Luish", "Joshe");
+
+    document.write("<br/>=>> Función que devuelve un valor. <br/>");
+    function devolverMayor(a, b) {
+      if (a > b) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+
+    document.write("El número mayor entre 35 y 21 es el: " + devolverMayor(35, 21) + ".");
+  </script>
+</body>
+
+</html>
