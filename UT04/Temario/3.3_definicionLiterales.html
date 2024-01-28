@@ -29,17 +29,45 @@
 <body>
   <p>
     <script>
+      // Definición valor fijo
+      var avion = { marca: "Boeing", modelo: "747", pasajeros: "450" };
+
+      document.write(avion.marca + "<br/>");
+      document.write(avion["modelo"] + "<br/>");
+
+      //Equivalente
+      var avion = new Object();
+      avion.marca = "Boeing";
+      avion.modelo = "747";
+      avion.pasajeros = "450";
+
+      document.write("->> " + avion.marca + "<br/>");
+      document.write("->> " + avion["modelo"] + "<br/>");
 
     </script>
   </p>
   <p>
     <script>
+      // Conjunto de literales
+      var datos = [
+        { "id": "2", "nombrecentro": "IES A Piringalla", "localidad": "Lugo", "provincia": "Lugo" },
+        { "id": "10", "nombrecentro": "IES As Fontiñas", "localidad": "Santiago", "provincia": "A Coruña" },
+        { "id": "9", "nombrecentro": "IES As Lagoas", "localidad": "Ourense", "provincia": "Ourense" },
+        { "id": "8", "nombrecentro": "IES Cruceiro Baleares", "localidad": "Culleredo", "provincia": "A Coruña" },
+        { "id": "6", "nombrecentro": "IES Cruceiro Baleares", "localidad": "Culleredo", "provincia": "A Coruña" }, { "id": "4", "nombrecentro": "IES de Teis", "localidad": "Vigo", "provincia": "Pontevedra" },
+        { "id": "5", "nombrecentro": "IES Leliadoura", "localidad": "Ribeira", "provincia": "A Coruña" },
+        { "id": "7", "nombrecentro": "IES Leliadoura", "localidad": "Ribeira", "provincia": "A Coruña" },
+        { "id": "1", "nombrecentro": "IES Ramon Aller Ulloa", "localidad": "Lalin", "provincia": "Pontevedra" },
+        { "id": "3", "nombrecentro": "IES San Clemente", "localidad": "Santiago de Compostela", "provincia": "A Coruña" }
+      ];
 
-    </script>
-  </p>
-  <p>
-    <script>
-
+      // Recorrer el array
+      for (var i = 0; i < datos.length; i++) {
+        document.write("Centro ID: " + datos[i].id + " - ");
+        document.write("Nombre: " + datos[i].nombrecentro + " - ");
+        document.write("Localidad: " + datos[i].localidad + " - ");
+        document.write("Provincia: " + datos[i].provincia + "<br/>");
+      }
     </script>
   </p>
 </body>

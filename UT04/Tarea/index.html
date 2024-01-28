@@ -27,23 +27,25 @@
 </head>
 
 <body>
+  <p>
+    <script>
+
+      let person = {
+        firstname: "Gabriel",
+        lastName: "González",
+        age: 34,
+        dni: "03939399-K"
+      }
+      function print(indice) {
+        document.write(person.firstname + " " + person.lastName + " ");
+      }
+
+      for (var i = 0; i < person.lenght; i++) {
+        print(i);
+      }
+    </script>
+  </p>
+
 </body>
-<p>
-  <script>
-    var profesores = ["Cristina", "Catalina", "Vieites", "Benjamin"];
-    var asignaturas = ["Ciberseguridad", "Bases de Datos", "Sistemas Informáticos", "Redes"];
-    var alumnos = [24, 17, 28, 26];
-
-    function imprimeDatos(indice) {
-      document.write("=>> " + profesores[indice] + " del módulo de " +
-        asignaturas[indice] + ", tiene " + alumnos[indice] + " alumnos en clase." + "<br/>");
-    }
-
-    for (i = 0; i < profesores.length; i++) {
-      imprimeDatos(i);
-    }
-
-  </script>
-</p>
 
 </html>
