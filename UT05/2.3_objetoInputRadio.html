@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>DWEC05 - Trabajando con objetos input de tipo radio</title>
+  <script type="text/javascript">
+    function mostrarDatos() {
+      for (var i = 0; i < document.formulario.actores.length; i++) {
+        if (document.formulario.actores[i].checked)
+          alert(document.formulario.actores[i].value);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Trabajando con objetos input de tipo radio</h1>
+  <form name="formulario" action="stooges.php">
+    <fieldset>
+      <legend>Selecciona tu actor favorito:</legend>
+      <input type="radio" name="actores" id="actor-1" value="Walter Bruce Willis - 19 de Marzo de 1955" checked>
+      <label for="actor-1">Willis</label>
+      <input type="radio" name="actores" id="actor-2" value="James Eugene Jim Carrey - 17 de Enero de 1962">
+      <label for="actor-2">Carrey</label>
+      <input type="radio" name="actores" id="actor-3" value="Luis Tosar - 13 de Octubre de 1971">
+      <label for="actor-3">Tosar</label>
+      <input type="button" id="consultar" name="consultar" value="Consultar Más Datos" onclick="mostrarDatos()">
+    </fieldset>
+  </form>
+</body>
+
+</html>

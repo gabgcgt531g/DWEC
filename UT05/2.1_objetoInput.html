@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>DWEC05 - Propiedad VALUE de un objeto de tipo texto</title>
+	<script type="text/javascript">
+		function convertirMayusculas() {
+			/*
+				En este ejemplo accedemos a la propiedad value de un objeto con id nombre y le asignamos 
+				su contenido actual pero convertido a mayúsculas con el método toUpperCase() del objeto String.
+			*/
+			document.getElementById("nombre").value = document.getElementById("nombre").value.toUpperCase();
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Propiedad VALUE de un objeto INPUT de tipo TEXT</h1>
+	<form id="formulario" action="pagina.php">
+		<p>
+			<label for="nombre">Nombre y Apellidos: </label>
+			<input type="text" id="nombre" name="nombre" value="" size="30" onblur="convertirMayusculas()">
+		</p>
+		Introduce tu Nombre y Apellidos y haz click fuera del campo.
+	</form>
+</body>
+
+</html>

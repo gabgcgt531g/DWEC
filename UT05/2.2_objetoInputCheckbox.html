@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <script type="text/javascript">
+    function marcar() {
+      document.getElementById("verano").checked = true;
+    }
+    function desmarcar() {
+      document.getElementById("verano").checked = false;
+    }
+  </script>
+</head>
+
+<body>
+  <form action="" method="get">
+    <input type="checkbox" id="verano" name="verano" value="Si" />¿Te gusta el verano?
+    <input type="submit" />
+  </form>
+  <button onclick="marcar()">Marcar Checkbox</button>
+  <button onclick="desmarcar()">Desmarcar Checkbox</button>
+</body>
+
+</html>
