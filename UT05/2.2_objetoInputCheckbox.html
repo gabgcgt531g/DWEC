@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+
   <script type="text/javascript">
     function marcar() {
       document.getElementById("verano").checked = true;
@@ -9,15 +11,47 @@
       document.getElementById("verano").checked = false;
     }
   </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgb(247, 247, 239);
+      font-family: 'JetBrains Mono';
+      font-size: 14px;
+    }
+
+    .row {
+      width: fit-content;
+      border: 2px solid rgba(39, 41, 43, 0.1);
+      border-radius: 15px;
+      padding: .9rem;
+      margin: .9rem;
+      font-family: 'JetBrains Mono';
+      font-size: 0.95rem;
+    }
+
+    button,
+    input {
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono';
+      margin: 5px;
+    }
+  </style>
 </head>
 
 <body>
-  <form action="" method="get">
-    <input type="checkbox" id="verano" name="verano" value="Si" />¿Te gusta el verano?
-    <input type="submit" />
-  </form>
-  <button onclick="marcar()">Marcar Checkbox</button>
-  <button onclick="desmarcar()">Desmarcar Checkbox</button>
+  <div class="row">
+    <div class="col-3">
+      <form action="" method="get">
+        <input type="checkbox" id="verano" name="verano" value="Si" />¿Te gusta el verano?
+        <input type="submit" />
+      </form>
+      <button onclick="marcar()">Marcar Checkbox</button>
+      <button onclick="desmarcar()">Desmarcar Checkbox</button>
+    </div>
+  </div>
 </body>
 
 </html>

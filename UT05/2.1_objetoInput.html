@@ -13,16 +13,42 @@
 			document.getElementById("nombre").value = document.getElementById("nombre").value.toUpperCase();
 		}
 	</script>
+	<style>
+		body {
+			background-color: rgb(247, 247, 239);
+			font-family: 'JetBrains Mono';
+		}
+
+		h2 {
+			background-color: rgba(39, 41, 43, 0.1);
+			padding: 0.8rem;
+			border-radius: 10px;
+		}
+
+		form {
+			border: 1px solid rgba(39, 41, 43, 0.1);
+			border-radius: 15px;
+			margin: 0.95rem;
+			padding-left: 15px;
+			padding-bottom: 15px;
+			font-size: 0.9rem;
+		}
+
+		p.aclaracion {
+			font-size: 0.7rem;
+			font-style: italic;
+		}
+	</style>
 </head>
 
 <body>
-	<h1>Propiedad VALUE de un objeto INPUT de tipo TEXT</h1>
+	<h2>Propiedad VALUE de un objeto INPUT de tipo TEXT</h2>
 	<form id="formulario" action="pagina.php">
 		<p>
 			<label for="nombre">Nombre y Apellidos: </label>
 			<input type="text" id="nombre" name="nombre" value="" size="30" onblur="convertirMayusculas()">
 		</p>
-		Introduce tu Nombre y Apellidos y haz click fuera del campo.
+		<p class="aclaracion">Introduce tu Nombre y Apellidos y haz click fuera del campo.</p>
 	</form>
 </body>
 

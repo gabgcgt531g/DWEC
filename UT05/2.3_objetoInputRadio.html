@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DWEC05 - Trabajando con objetos input de tipo radio</title>
   <script type="text/javascript">
     function mostrarDatos() {
@@ -12,10 +13,52 @@
       }
     }
   </script>
+  <style>
+    body {
+      background-color: rgb(247, 247, 239);
+      font-family: 'JetBrains Mono';
+    }
+
+    h2 {
+      background-color: rgba(39, 41, 43, 0.1);
+      padding: 0.8rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    fieldset {
+      width: fit-content;
+      padding: 10px;
+      margin: .98rem;
+      border-radius: 5px;
+    }
+
+    form {
+      width: fit-content;
+      border: 1px solid rgba(39, 41, 43, 0.1);
+      border-radius: 15px;
+      margin: 0.95rem;
+      padding-left: 15px;
+      padding-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    p.aclaracion {
+      font-size: 0.7rem;
+      font-style: italic;
+    }
+
+    button,
+    input {
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono';
+      margin-left: .9rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Trabajando con objetos input de tipo radio</h1>
+  <h2>Trabajando con objetos input de tipo radio</h2>
   <form name="formulario" action="stooges.php">
     <fieldset>
       <legend>Selecciona tu actor favorito:</legend>
@@ -25,7 +68,7 @@
       <label for="actor-2">Carrey</label>
       <input type="radio" name="actores" id="actor-3" value="Luis Tosar - 13 de Octubre de 1971">
       <label for="actor-3">Tosar</label>
-      <input type="button" id="consultar" name="consultar" value="Consultar Más Datos" onclick="mostrarDatos()">
+      <input type="button" id="consultar" name="consultar" value="Consultar más Datos" onclick="mostrarDatos()">
     </fieldset>
   </form>
 </body>

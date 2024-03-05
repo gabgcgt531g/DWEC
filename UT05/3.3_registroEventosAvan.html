@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Registro de Eventos (Avanzado)</title>
+
+  <style>
+    body {
+      background-color: rgb(247, 247, 239);
+      font-family: 'JetBrains Mono';
+    }
+
+    h2 {
+      background-color: rgba(39, 41, 43, 0.1);
+      padding: 0.7rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    #columna {
+      border: 1px solid rgba(39, 41, 43, 0.1);
+      border-radius: 15px;
+      margin: 0.5rem;
+      padding: 15px;
+      background-color: rgb(245, 245, 224);
+    }
+
+    a {
+      font-family: 'JetBrains Mono';
+      margin-left: .9rem;
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: brown;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2 class="container-md">Trabajando con <i>Eventos</i></h2>
+
+  <div class="container">
+    <div class="row">
+      <!-- 1ª Columna -->
+      <div class="col" id="columna">
+        <a id="mienlace" href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events"
+          target="_blank">Registro avanzado</i></a>
+
+        <script type="text/javascript">
+          document.getElementById("mienlace").addEventListener('click', alertar, false);
+          function alertar() {
+            alert("Te conectaremos con la página: " + this.href);
+          }
+        </script>
+
+      </div>
+
+      <!-- 2ª Columna -->
+      <div class="col" id="columna">
+        <a id="mienlace1" href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events"
+          target="_blank">Registro avanzado</i></a>
+
+        <script type="text/javascript">
+          mienlace1.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Cambia el color de fondo del enlace al hacer clic
+            this.style.backgroundColor = '#cc0000';
+            this.style.color = '#FFFFFF';
+
+            // Mensaje de alerta previo
+            alert("Vas a abrir el enalce en MDN");
+
+            // Abre el enlace en una nueva pestaña
+            window.open(this.href, '_blank');
+
+          }, false);
+        </script>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

@@ -3,33 +3,61 @@
 
 <head>
   <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <title>Uso de la palabra reservada this</title>
+  <title>DWEC05 - Trabajando con un objeto Select</title>
   <script type="text/javascript">
-    function identificar(objeto) {
-      var atrName = objeto.name;
-      var atrId = objeto.id;
-      var atrValue = objeto.value;
-      var atrType = objeto.type;
-      alert("Datos del campo pulsado:\n\nName: " + atrName + "\nID: " + atrId + "\nValue: " + atrValue + "\nType: " + atrType);
+    function consultar() {
+      var objProvincias = document.getElementById("provincias");
+      var texto = objProvincias.options[objProvincias.selectedIndex].text;
+      var valor = objProvincias.options[objProvincias.selectedIndex].value;
+      alert("Datos de la opción seleccionada:\n\nTexto: " + texto + "\nValor: " + valor);
     }
   </script>
+  <style>
+    body {
+      background-color: rgb(247, 247, 239);
+      font-family: 'JetBrains Mono';
+    }
+
+    h2 {
+      background-color: rgba(39, 41, 43, 0.1);
+      padding: 0.8rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    form {
+      width: fit-content;
+      border: 1px solid rgba(39, 41, 43, 0.1);
+      border-radius: 15px;
+      margin: 0.95rem;
+      padding: .5rem;
+      font-size: 0.9rem;
+    }
+
+    select,
+    input {
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono';
+      margin-left: .25rem;
+      border-radius: 10px;
+      padding-left: .5rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Trabajando con this</h1>
+  <h2>Trabajando con un objeto <i>Select</i></h2>
   <form id="formulario" action="pagina.php">
-    <p>
-      <label for="nombre">Nombre: </label>
-      <input type="text" name="nombre" id="nombre" value="Constantino" onclick="identificar(this)" />
-      <label for="apellidos">Apellidos: </label>
-      <input type="text" name="apellidos" id="apellidos" value="Veiga Perez" onclick="identificar(this)" />
-      <label for="edad">Edad: </label>
-      <input type="password" name="edad" id="edad" value="55" onclick="identificar(this)" />
-      <label for="pais">Pais: </label>
-      España <input type="radio" name="pais" id="pais1" value="ES" onclick="identificar(this)" />
-      Francia <input type="radio" name="pais" id="pais2" value="FR" onclick="identificar(this)" />
+    <p><label for="provincias">Seleccione provincia: </label>
+      <select name="provincias" id="provincias">
+        <option value="C">La Coruña</option>
+        <option value="LU">Lugo</option>
+        <option value="OU">Ourense</option>
+        <option value="PO">Pontevedra</option>
+      </select>
     </p>
-    Haga clic en cada uno de los campos para ver más información.
+    Selecciona una opción y pulsa el botón
+    <input type="button" name="boton" value="Consultar información" onclick="consultar()" />
   </form>
 </body>
 
