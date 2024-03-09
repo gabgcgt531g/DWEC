@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cookies</title>
+</head>
+
+<body>
+  <h2 style="font-family: Courier">Cookies con alertas</h2>
+
+  <script>
+    // Crear una cookie: nombre; fecha de expiración -UTC; edad máxima en segundos; ruta; dominio;
+    // document.cookie = "usuario = Gabriel; expires = Thu, 16 Nov 2019 12:00:00 UTC; path =/;";
+    document.cookie = "usuario = Gabriel;";
+    document.cookie = "sexo = hombre;";
+
+    // Leer la cookie
+    var miCookie = document.cookie;
+    alert(miCookie);
+
+    // Modificar o sobreescribir una cookie
+    document.cookie = "usuario = Ramón;";
+    alert(document.cookie);
+
+    // Borrar una cookie. Poner una fecha de expiración anterior a la actual
+    document.cookie = "usuario =; expires = Thu, 01 Jan 1970 00:00:01 GMT"
+    document.cookie = "sexo =; expires = Thu, 01 Jan 1970 00:00:01 GMT"
+    alert(document.cookie);
+
+
+  </script>
+
+</body>
+
+</html>

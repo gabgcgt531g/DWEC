@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Ejemplos de RegExp</title>
+  <script type="text/javascript">
+    window.onload = iniciar;
+    // Cuando se termine de cargar el documento,llamará a la función iniciar().
+    // En esa función programaremos el evento de click para el botón comprobar.
+    // Si no esperamos a que se cargue el documento, el botón no estará disponible
+    // y fallará el acceso a document.getElementByid("comprobar"), ya que todavía no conoce ese objeto.
+
+    function iniciar() {
+      document.getElementById("comprobar").onclick = comprobar;
+    }
+
+    function comprobar() {
+      var numero = document.getElementById("ssn").value;
+      // Estándar 3 cifras + guión + 2 cifras + guión + 4 cifras
+      var patron = /^\d{3}-?\d{2}-?\d{4}$/;
+      if (numero.match(patron)) {
+        alert("Correcto: el número " + numero + " cumple el estándar americano");
+      } else {
+        alert("Error: el número " + numero + " NO cumple el estandar.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="formulario">
+    <label for="ssn">Número Seguridad Social Americano:</label>
+    <input type="text" name="ssn" id="ssn" />
+    <input type="button" name="comprobar" id="comprobar" value="Comprobar Formato" />
+  </form>
+</body>
+
+</html>

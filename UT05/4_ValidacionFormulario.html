@@ -7,6 +7,11 @@
   <title>Validacion de un Formulario</title>
   <script type="text/javascript" src="4_ValidacionFormulario.js"></script>
   <style type="text/css">
+    body {
+      font-family: 'Courier';
+      font-size: 14px;
+    }
+
     label {
       width: 150px;
       float: left;
@@ -22,12 +27,41 @@
 
     fieldset {
       background: #e0e7da;
-      width: 350px;
+      border-radius: 10px;
+      width: 360px;
     }
 
     .error {
       border: solid 2px #FF0000;
 
+    }
+
+    legend {
+      background-color: #ffffff;
+      padding: 5px;
+      border-radius: 10px;
+      border: 1px solid black;
+      width: fit-content;
+
+    }
+
+    #limpiar,
+    #enviar {
+      padding: 3px;
+      margin-left: 5px;
+      border-radius: 10px;
+      border: 1px solid black;
+      font-family: 'Courier';
+      font-size: 18px;
+    }
+
+
+
+    input,
+    option {
+      border-radius: 10px;
+      border: 1px solid black;
+      padding: 4px;
     }
   </style>
 </head>
@@ -46,7 +80,7 @@
       <input name="matricula" type="text" id="matricula" value="XXXX AAA" />
       <label for="provincia">Provincia:</label>
       <select name="provincia" id="provincia">
-        <option value="0" selected="selected">Seleccione Provincia</option>
+        <option class="selector" value="0" selected="selected">Seleccione Provincia</option>
         <option value="H">Huesca</option>
         <option value="ZA">Zaragoza</option>
         <option value="T">Teruel</option>
@@ -56,5 +90,6 @@
     </form>
   </fieldset>
 </body>
+
 
 </html>
