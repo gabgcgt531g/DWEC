@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Objeto Number</title>
+</head>
+
+<body>
+  <input type="checkbox" name="coche" />Audi A6
+  <p id="p1">Párrafo 1.</p>
+  <p id="p2">Párrafo 2.</p>
+  <p id="p3">Párrafo 3.</p>
+  <p id="p4">Párrafo 4.</p>
+  <p id="p5">Párrafo 5.</p>
+  <p id="p6">Párrafo 6.</p>
+
+  <script>
+    let num = new Number(13.3714);
+
+    document.getElementById("p1").innerHTML = num.toPrecision(3);
+    document.getElementById("p2").innerHTML = num.toFixed(1);
+    document.getElementById("p3").innerHTML = num.toString(2);
+    document.getElementById("p4").innerHTML = num.toString(16);
+    document.getElementById("p5").innerHTML = Number.MIN_VALUE;
+    document.getElementById("p6").innerHTML = Number.MAX_VALUE;
+
+  </script>
+
+</body>

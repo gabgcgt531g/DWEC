@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>Apertura y Cierre de Ventanas</title>
+  <script type="text/javascript">
+    function inicializar() {
+      document.getElementById("crear-ventana").onclick = crearNueva;
+      document.getElementById("cerrar-ventana").onclick = cerrarNueva;
+      document.getElementById("midu").onclick = crearOtra;
+    }
+    var nuevaVentana;
+    function crearNueva() {
+      nuevaVentana = window.open("http://www.google.es", "",
+        "height=800,width=600");
+    }
+
+
+    function cerrarNueva() {
+      if (nuevaVentana) {
+        nuevaVentana.close(); nuevaVentana = null;
+      }
+    }
+
+    var aprende;
+    function crearOtra() {
+      aprende = window.open("https://www.aprendejavascript.dev/",
+        "", "height=1000, width=800");
+    }
+
+  </script>
+</head>
+
+<body onLoad="inicializar()">
+  <h1>Abrimos y cerramos ventanas</h1>
+  <form>
+    <p>
+      <input type="button" id="crear-ventana" value="Crear Nueva Ventana">
+      <input type="button" id="cerrar-ventana" value="Cerrar Nueva Ventana">
+      <input type="button" id="midu" value="Aprende Javascript">
+    </p>
+  </form>
+
+</html>

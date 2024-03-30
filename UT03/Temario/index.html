@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lista de Tareas</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Lista de Tareas</h1>
+
+  <ul id="listaTareas">
+    <li class="completed">Hacer la compra</li>
+    <li>Estudiar para el examen</li>
+    <li>Preparar la presentación</li>
+  </ul>
+
+  <form id="formularioTarea">
+    <input type="text" id="nuevaTarea" placeholder="Nueva tarea">
+    <button type="button" onclick="agregarTarea()">Agregar Tarea</button>
+  </form>
+
+  <script src="app.js"></script>
+  <script>
+    const browserName = navigator.appName;
+    console.log("Nombre del navegador:", browserName);
+    const urlCompleta = window.location.href;
+    console.log("URL completa:", urlCompleta);
+    window.addEventListener("load", function () {
+      console.log("La página ha cargado completamente.");
+    });
+    window.addEventListener("resize", function () {
+      console.log("La ventana ha sido redimensionada.");
+    });
+    const protocolo = window.location.protocol;
+    console.log("Protocolo:", protocolo);
+
+
+
+  </script>
+</body>
+
+</html>
