@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="HTTP://code.jquery.com/jquery-latest.js"></script>
+
+  <script type="text/javascript">
+    // También podríamos poner $(function) {….});
+    $(document).ready(function () {    // Cuando el documento esté preparado se ejecuta esta función.
+      // Seleccionamos las filas impares contenidas dentro de mitabla y le aplicamos la clase colorido.
+      $("#mitabla tr:nth-child(even)").addClass("colorido");
+    });
+  </script>
+</head>
+
+<body>
+
+  .. Aquí irá la tabla …
+
+</body>
+
+</html>

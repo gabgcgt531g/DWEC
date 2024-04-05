@@ -1,0 +1,12 @@
+{
+  "Name": "Beatles",
+  "Country": "England",
+  "YearFormed": 1959,
+  "Style": "Rock'n'Roll",
+  "Members": [
+    "Paul",
+    "John",
+    "George",
+    "Ringo"
+  ]
+}
