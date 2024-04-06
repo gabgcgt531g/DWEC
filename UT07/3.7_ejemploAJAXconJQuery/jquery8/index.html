@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alta Profesores</title>
+<style type="text/css">
+#errores{
+	width:200px;
+	float:left;
+}
+
+#formulario{
+float: left;	
+}
+
+.verdes{
+	background-color: green;
+}
+
+.rojos{
+	background-color: red;
+}
+</style>
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript">
+$(document).ready(function()
+{
+function respuestaOK(text)
+{
+	if (text != "ERROR") {
+		$("#formulario").html("Datos Insertados correctamente").addClass("verdes").fadeTo(500,1).fadeTo(2000,0,function()
+			{
+				$("#formulario").html("<a href='enunciado.html'>Dar de alta otro registro</a>").removeClass("verdes").fadeTo(500,1);
+			});
+	}
+}
+
+
+
+// Deshabilitamos boton enviar.
+$("#enviar").prop("disabled",1);
+
+$("#identificador").blur(function()
+{
+	$.post("chequear.php", { codigo: $(this).val() }, function(datos)
+			{
+				// Aqui gestionaremos los datos devueltos por el servidor.
+				if (datos.estado=="OK")
+				{
+					$("#errores").html(datos.mensaje).removeClass("rojos").addClass("verdes").fadeTo(500,1).fadeTo(1000,0);
+					$("#enviar").prop("disabled",0);
+				}
+				else
+				{
+					$("#errores").html(datos.mensaje).removeClass("verdes").addClass("rojos").fadeTo(500,1).fadeTo(1000,0);
+					$("#identificador").focus();
+					$("#enviar").prop("disabled",1);
+				}
+			},"json");
+});
+
+$("#enviar").click(function()
+{
+	errores=0;
+	cadena="";
+	
+	$(":text").each(function()
+	{
+		if ($(this).val() == "")
+		{
+			$("#errores").html("Error en campo: "+$(this).prop("name")).removeClass("verdes").addClass("rojos").fadeTo(500,1).fadeTo(1000,0);
+			$(this).focus();
+			errores=1;
+			return false;
+		}
+		
+		// Los parametros se enviarán en el siguiente formato:
+		// param1=valor&param2=valor&....
+		cadena+=$(this).prop("name")+"="+$(this).val()+"&";
+	});
+
+	cadena=cadena.substr(0,cadena.length-1);
+	if (errores==0)
+		{
+			// Enviamos los datos al servidor a través de una petición ajax.
+			$.ajax(
+			{	url: 'altas.php',
+				type: 'POST',
+				async: true,
+				data: cadena,
+				success: respuestaOK
+			});
+		}
+
+
+});
+
+
+});
+</script>
+</head>
+<body>
+<strong>Alta de Profesores</strong>
+<div id="formulario" name="formulario">
+  <table border="1">
+    <tr>
+      <td bgcolor="#00CC99">Identificador</td>
+      <td bgcolor="#00CC99"><label>
+        <input type="text" name="identificador" id="identificador" />
+      </label></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">Nombre</td>
+      <td bgcolor="#00CC99"><label>
+        <input type="text" name="nombre" id="nombre" />
+      </label></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">Apellidos</td>
+      <td bgcolor="#00CC99"><input type="text" name="apellidos" id="apellidos" /></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">E-mail</td>
+      <td bgcolor="#00CC99"><input type="text" name="email" id="email" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+			<input type="button" name="enviar" id="enviar" value="Enviar" />
+        </div>
+      </label></td>
+    </tr>
+  </table>
+  <p>&nbsp; </p>
+</div>
+<div id="errores" class="verdes"></div>
+</body>
+</html>

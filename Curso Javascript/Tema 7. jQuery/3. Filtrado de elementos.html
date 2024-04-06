@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtrado de elementos en jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+  <script>
+    $(document).ready(inicio);
+    function inicio() {
+      /* FILTRADO DE SELECCIONES:
+      -> .has: opera sobre elementos que contienen otros elemetnos incluidos en el 'has'.
+      $("div.parrafos").has("p"); // Devuelve los div que tienen p
+      
+      -> .not: opera sobre elementos que NO contienen otros elementos indicados en el 'has'.
+      $("p").not(".importante"); // Devuelve p que no tengan class 'importante'
+
+      -> .filter: opera sobre elementos que coinciden con la búsqueda.
+      $("p").filter(".importante"); // Devuelve p que tengan class 'importante'
+
+      -> .find: devuelve los descencientes de un elemento.
+      $("p#primero").find("span"); // Devuelve los 'span' hijos del p con id 'primero'
+
+      -> .first, .last: devuelve el primer o el último elemento de una lista.
+      $("p").first(); // Devuelve el primer p de la lista
+      $("p").last(); // Devuelve el último p de la lista
+      
+      -> .eq: devuelve situado en la posición indicada.
+      $("p").eq(5); // Devuelve el sexto p
+      */
+
+      /* ENCADENAMIENTO DE FILTROS */
+      $("div#textos")
+        .find("p") // Busca en todos los párrafos dentro de div#textos
+        .eq("0") // Selecciona primer párrafo
+        .html("TEXTO CAMBIADO EN EL PRIMER PÁRRAFO") // Cambia el texto del primer párrafo
+        .end() // Finaliza la selección anterior
+        .eq(2) // Selecciona tercer párrafo
+        .html("TEXTO CAMBIADO EN EL TERCER PÁRRAFO"); // Cambia el texto del tercer párrafo
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div id="textos">
+    <p id="primero">Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <h3>Título</h3>
+    <p class="importante">Párrafo 3</p>
+  </div>
+</body>
+
+</html>

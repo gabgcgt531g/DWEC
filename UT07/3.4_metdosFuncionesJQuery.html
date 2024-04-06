@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="funciones.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(inicio);
+    function inicio() {
+
+      // MÉTODO load()
+      $("#noticias").load("feeds.HTML");
+      // carga en el contenedor con id noticias lo que devuelve la página feeds.HTML.
+      $("#objectID").load("test.php", { 'personas[]': ["Juan", "Susana"] });
+      // Pasa un array de datos al servidor con el nombre de dos personas.
+
+      // METODO post()
+      $.post("test.php");
+      $.post("test.php", { nombre: "Juana", hora: "11am" });
+      $.post("test.php", function (resultados) {
+        alert("Datos Cargados: " + resultados);
+      });
+    }
+  </script>
+</head>
+
+<body>
+
+  .. Aquí irá la tabla …
+
+</body>
+
+</html>

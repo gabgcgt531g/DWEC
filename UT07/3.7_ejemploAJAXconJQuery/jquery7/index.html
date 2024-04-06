@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery - Funcion ajax()</title>
+<style type="text/css">
+.error{
+	background-color: #CC3333;
+}	
+.correcto{
+	background-color: #00CCCC;
+}
+#mensajes{
+	width: 300px;
+	margin: 10px auto;
+}
+
+</style>
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript">
+$(document).ready(function()
+{
+	$("#boton").click(function()
+	{
+		var elpais = $("#pais").val();
+		
+		if (elpais == "")
+		{
+			$("#mensajes").removeClass("correcto");
+			$("#mensajes").addClass("error");
+			$("#mensajes").html("Por favor introduzca el nombre de un pais");
+			$("#mensajes").fadeIn(200).fadeOut(2000);
+			$("#pais").focus();
+			return false;
+		}
+		else
+		{
+			$.ajax(
+			{
+				type: "POST",
+				url: "insertar.php",
+				data: "pais="+elpais,
+				success: function(resultadoejecucion)
+				{
+					$("#mensajes").addClass("correcto");
+					$("#mensajes").html(resultadoejecucion);
+					$("#mensajes").fadeIn(250).fadeOut(3000);
+					$("#pais").val("");			
+				
+				}
+				
+			});
+		}
+
+	});
+
+});
+</script>
+</head>
+<body>
+<div id="formulario" align="center">
+<label>Introduzca Pais <input type="text" name="pais" id="pais"></label>
+<input type="button" id="boton" value="Enviar" name="boton">
+</div>
+<div id="mensajes" align="center"></div>
+</body>
+</html>

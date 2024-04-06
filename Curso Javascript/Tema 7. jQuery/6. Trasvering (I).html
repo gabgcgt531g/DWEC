@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recorrido de elementos con jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+
+  <style>
+    .ancestors * {
+      display: block;
+      border: 2px solid lightgray;
+      padding: 5px;
+      margin: 15px;
+    }
+  </style>
+
+  <script>
+    $(document).ready(inicio);
+    function inicio() {
+      // ACCESO A ASCENDIENTES
+      // $("span").parent().css("border", "2px solid blue"); // Acceso a padre directo de 'span'
+      // $("span").parentsUntil("div").css("border", "2px solid red"); // Acceso a todos los padres de 'span' hasta 'div', sin incluirlo
+      // $("span").parents().css("border", "2px solid green"); // Acceso a todos los padres de 'span'
+      // $("span").closest("ul").css("border", "2px solid pink");  // Acceso a antecesor mas cercano a esa 'span'
+
+      // ACCESO A DESCENDIENTES
+      // $("li").children().css("border", "2px solid violet"); // Acceso a descendientes de 'li'
+      // $("li").children("i.cur").css("border", "2px solid red"); // Acceso a descendientes de 'li' que sean etiqueta 'i' y clase 'cur'
+      // $("div").find("b").css("border", "2px solid red"); // Filtro que cumpla
+
+      // ACCESO A HERMANOS      
+      // $("i").siblings("").css("border", "2px solid green"); // Marca los hermanos de 'i'
+      // $("i").next("").css("border", "2px solid green"); // Marca el siguiente hermano de 'i'
+      // $("i").prev("").css("border", "2px solid green"); // Marca el anterior hermano de 'i'
+      // $("i").nextAll("").css("border", "2px solid green"); // Marca el todos los hermanos siguientes de 'i'
+      // $("i").prevAll("").css("border", "2px solid green"); // Marca el todos los hermanos anteriores de 'i'
+      // $("span").nextUntil("b").css("border", "2px solid green"); // Marca el todos los hermanos de 'span' hasta de 'b', no incluida
+
+      // FILTRADO
+      // .has, .not, .first, .last, .eq(número)
+
+      //AÑADIR ELEMENTOS A UNA SELECCIÓN. No creo elementos, solo amplía la selección
+      $("span").add("b").add("div").css("border", "2px solid green"); // Aplica el estilo a 'span', 'b' y 'div'
+
+    }
+  </script>
+
+</head>
+
+<body class="ancestors"> body (tatarabuelo)
+  <div style="width: 500px;"> div (bisabuelo)
+    <ul> ul (abuelo)
+      <li> li (padre)
+        <span>span</span>
+        <i class="cur">cursiva</i>
+        <b>negrita</b>
+        <u>subrayado</u>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

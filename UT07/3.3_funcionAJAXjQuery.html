@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="funciones.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(inicio);
+    function inicio() {
+      $.AJAX({
+        url: '/ruta/pagina.php',
+        type: 'POST',
+        async: true,
+        data: 'parametro1=valor1&parametro2=valor2',
+        success: function (respuesta) {
+          alert(respuesta);
+        },
+        error: mostrarError
+      });
+    }
+  </script>
+</head>
+
+<body>
+
+  .. Aquí irá la tabla …
+
+</body>
+
+</html>

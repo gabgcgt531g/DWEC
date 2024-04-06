@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recorrido de elementos con jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+
+  <style>
+    .origen {
+      border: 2px solid blue;
+      padding: 10px;
+    }
+
+    .origen,
+    .hijo {
+      padding-left: 10px;
+      color: green;
+    }
+
+    .hermano {
+      color: red;
+    }
+  </style>
+
+  <script>
+    $(document).ready(inicio);
+    function inicio() {
+
+
+    }
+  </script>
+</head>
+
+<body>
+  <div class="origen">texto del div</div>
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+    <li>Elemento 3</li>
+    <li>Elemento 4</li>
+  </ul>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quia at ipsa officiis mollitia quae asperiores
+    distinctio deleniti nemo aperiam porro, aliquam illum velit obcaecati architecto quisquam molestias eos ad.</p>
+</body>
+
+</html>

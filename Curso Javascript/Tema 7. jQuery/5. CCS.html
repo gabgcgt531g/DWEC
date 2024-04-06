@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS en jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+  <style>
+    .verde {
+      color: green;
+    }
+  </style>
+  <script>
+
+    $(document).ready(inicio);
+    function inicio() {
+      // EXTRAER PROPIEDADES CSS
+      // console.log("El tamaño de la fuente es", $("h1").css("font-size")); //Devuele el nº de pixeles de la fuente
+      console.log("El tamaño inicial de la fuente es", $("h1").css("fontSize")); //Devuele el nº de pixeles de la fuente con CamelCase
+
+      // MODIFICAR PROPIEDADES CSS
+      $("h1").css("font-size", 18);
+      console.log("El tamaño de la fuente ha cambiado a", $("h1").css("fontSize"));
+
+      $("h1").css({
+        "font-size": "22px",
+        "color": "red"
+      });
+
+      console.log("El tamaño de la fuente ha cambiado a", $("h1").css("fontSize"), "y el color es", $("h1").css("color"));
+
+      //MODIFICAR CLASES CSS
+      $("h3").addClass("verde"); // Añade una clase
+      console.log("El color addClass", $("h3").css("color"));
+
+      $("h3").removeClass("verde"); // Borra una clase
+      console.log("El color removeClass", $("h3").css("color"));
+
+      $("h3").toggleClass("verde"); // Añade una clase si no la tiene y la borra si ya la tenía
+      console.log("El color toogleClass", $("h3").css("color"));
+
+      $("h3").hasClass("verde"); // Devuele true o false si contiene la clase
+      console.log("El color hasClass", $("h3").css("color"));
+
+      $("h3").click(function () {
+        $(this).toggleClass("verde");
+        console.log("El color tras function", $("h3").css("color"));
+      });
+
+      // MÉTODOS PROPIOS PARA CMABIR DIMIENSIONES CSS
+      // .with(), .heigth(), .innerWidth(), .innerHeigth(), .outerWidth(), outerHeigth()
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <h1>Cabecera</h1>
+  <h3>Título</h3>
+</body>
+
+</html>

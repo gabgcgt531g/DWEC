@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Alta Profesores</title>
+<style type="text/css">
+#errores{
+	width:200px;
+	float:left;
+}
+
+#formulario{
+float: left;	
+}
+
+.verdes{
+	background-color: green;
+}
+
+.rojos{
+	background-color: red;
+}
+</style>
+</head>
+<body>
+<strong>Alta de Profesores</strong>
+<div id="formulario" name="formulario">
+  <table border="1">
+    <tr>
+      <td bgcolor="#00CC99">Identificador</td>
+      <td bgcolor="#00CC99"><label>
+        <input type="text" name="identificador" id="identificador" />
+      </label></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">Nombre</td>
+      <td bgcolor="#00CC99"><label>
+        <input type="text" name="nombre" id="nombre" />
+      </label></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">Apellidos</td>
+      <td bgcolor="#00CC99"><input type="text" name="apellidos" id="apellidos" /></td>
+    </tr>
+    <tr>
+      <td bgcolor="#00CC99">E-mail</td>
+      <td bgcolor="#00CC99"><input type="text" name="email" id="email" /></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+			<input type="button" name="enviar" id="enviar" value="Enviar" />
+        </div>
+      </label></td>
+    </tr>
+  </table>
+  <p>&nbsp; </p>
+</div>
+<div id="errores" class="verdes"></div>
+</body>
+</html>

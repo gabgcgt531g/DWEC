@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectores en jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+  <script>
+    $(document).ready(inicio);
+    function inicio() {
+
+      /* SELECTORES
+      $("p") // Por su etiqueta
+      $("#primero") // Por su id
+      $(".importante") // Por su class
+      $("p[nanme = primero]") // Por su atributo
+      $("a[target = '_blank']") // Por pseudoselectores 
+      Para conocer mas: https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+      */
+
+      /* GUARADAR SELECCIÓN EN UAN VARIABLE
+      var parrafos = $("p"); // Guarda los elementos en el momento
+      */
+
+      /* EVENTOS
+      Texto: html, text, val.
+      Ratón: click, dblclick, mouseover, mouseout, mouseenter, mouseleave.
+      Teclado: keypress, keydown, keyup.
+      Formularios: submit, change, focus, blur.
+      Document/Window: load, resize, scroll, unload
+      */
+
+      $("p").mouseover(function () {
+        // Cambian de color todos los párrafos
+        // $("p").css("color", "red");
+
+        // Solo cambia de color sobre el párrafo que nos encontramos
+        $(this).css("color", "red");
+      });
+
+      $("p").mouseout(function () {
+        // $("p").css("color", "black");
+
+        $(this).css("color", "black");
+      });
+
+      $("p#primero").click(function () {
+        alert("Has pulsado el primer párrafo");
+      });
+
+      $("p.importante").click(function () {
+        $(this).hide();
+      });
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <p id="primero">Párrafo 1</p>
+  <br>
+  <p>Párrafo 2</p>
+  <br>
+  <p class="importante">Párrafo 3</p>
+</body>
+
+</html>

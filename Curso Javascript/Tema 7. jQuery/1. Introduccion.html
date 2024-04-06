@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- jQuery
+  -> Es una librería de JavaScript que reduce la escritura de código.
+  -> Hace mas sencillo el usor de JavaScript web.
+  -> Simplifica el trabajo con el DOM y AJAX. -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Introducción jQuery</title>
+
+  <!-- Referencia jQuery version con conexión. Google CDN 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> -->
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+  <script>
+    /* Sintaxis: $(selector).accion() */
+
+    /* Espera a la carga de HTML */
+    /* -> Primera opción 
+    $(document).ready(function () {
+      alert("Página cargada correctamente")
+    }); 
+    */
+
+    /* -> Segunda opción */
+    $(document).ready(inicio);
+    function inicio() {
+      alert("Página cargada correctamnente");
+      document.getElementById("hola").innerHTML = "Hola mundo!"
+    }
+
+    /* -> Tercera opción. Version reducida. No es la mas recomendable, menos intutuitiva para enternderla
+    $(function () {
+      alert("Página cargada correctamente");
+    }); 
+    */
+  </script>
+
+</head>
+
+<body>
+  <p id="hola"></p>
+</body>
+
+</html>

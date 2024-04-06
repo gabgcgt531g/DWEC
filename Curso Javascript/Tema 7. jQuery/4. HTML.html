@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML en jQuery</title>
+
+  <!-- Referencia jQuery version sin conexión, en local -->
+  <script src="jQuery/jQuery-3.7.1.js"></script>
+  <script>
+    /* Utilizamos GETTERS y SETTERS con jQuery para modificar o extraer la información contendida en HTML */
+
+    $(document).ready(inicio);
+    function inicio() {
+      // EXTRAER INFORMACIÓN DE UN ELEMENTO (GET): paréntesis sin parámetros 
+      alert($("p#primero").html()); // Extrae el código HTML
+      alert($("p#primero").text()); // Extrae el texto
+      alert($("input").val()); // Extrae el valor de un input
+
+      // MODIFICAR LA INFORMACIÓN DE UN ELEMENTO (SET): valor entre paréntesis
+      $("p#primero").html("nuevo valor del párrafo 1"); // Introducir código html
+      $("p#primero").text("nuevo valor del párrafo 1"); // Introducir texto
+      $("input").val("nuevo valor del input"); // Introducir nuevo valor en un 'input'
+
+      // EXTRAER INFROMACIÓN DE UN ATRIBUTO (GET)
+      alert($("a").attr("href"));
+
+      // MODIFICAR LA INFORMACIÓN DE UN ATRIBUTO (SET):
+      // Un solo atirbuto
+      $("a").attr("href", "https://www.w3schools.com/jquery");
+
+      // Varios atributos a la vez
+      $("a").attr({
+        "title": "Todos los enlaces",
+        "href": "https://www.w3schools.com"
+      });
+
+      // FUNCIONES 'CALLBACK': los métodos text, html, val y attr tiene una función 'callback' con dos parámetros: el índice del elemento actual en la lista de elementos seleccionados, y el valor original.
+      $("button#cambiar").click(function () {
+        $("a").attr("href", function (i, original) {
+          return original + "/jquery/trysel.asp"; // Cambia el enalce, añadiendo información a su link original
+        });
+      });
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <div id="textos">
+    <h1>Cabecera</h1>
+    <p id="primero">Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <h3>Título</h3>
+    <p class="importante">Párrafo 3</p>
+    <input type="text" value="Texto del input"> <br><br>
+    <a href="https://www.google.com/">Enlace</a><br><br>
+    <button id="cambiar">Cambiar</button>
+  </div>
+</body>
+
+</html>

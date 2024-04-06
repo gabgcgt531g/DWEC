@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery - Ejemplo 3 - Estilo a los enlaces.</title>
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript">
+$(document).ready(function()
+{
+	$("a[href$='.pdf']").addClass("pdf");
+	$("a[href$='.zip']").addClass("zip");
+	$("a[href$='.doc']").addClass("doc");
+	$("a[href^='http://']:not([href*='http://informatica.iessanclemente.net'])").addClass("externo").attr({ target: "_blank"});
+});
+</script>
+
+<style type="text/css">
+#enlaces {
+margin: 10px auto;
+width: 560px;
+font: 12px Verdana;
+}
+
+#enlaces a {
+color:#D54E21;
+padding-top:3px;
+text-decoration:none;
+}
+
+.pdf {
+padding-left: 20px;
+background: transparent url(icono-pdf.png) left top no-repeat;
+}
+
+.zip {
+padding-left: 20px;
+background: transparent url(icono-zip.png) left top no-repeat;
+}
+
+.doc {
+padding-left: 20px;
+background: transparent url(icono-doc.png) left top no-repeat;
+}
+
+.externo {
+padding-left: 20px;
+background: transparent url(icono-ext.png) left top no-repeat;
+}
+
+</style>
+</head>
+<body>
+<div id="enlaces">
+	<p><a href="documento.pdf" name="rafa">Enlace a archivo PDF</a></p>
+	<p><a href="documento.zip">Enlace a archivo ZIP</a></p>
+	<p><a href="documento.doc">Enlace a archivo DOC</a></p>
+	<p><a href="http://www.xunta.es">Enlace externo - Xunta de Galicia</a></p>
+	<p><a href="http://www.terra.es">Enlace externo - Página de Terra</a></p>
+	<p><a href="http://informatica.iessanclemente.net">Página del Dpto. Informática IES San Clemente</a></p>
+	<p><a href="#enlaces">Enlace local #</a></p>
+</div>
+</body>
+</html>

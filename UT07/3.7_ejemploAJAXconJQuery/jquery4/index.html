@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery - Menú Desplegable</title>
+<style type="text/css" media="screen">
+BODY {
+	margin: 10px;
+	padding: 0;
+	font: 1em "Trebuchet MS", verdana, arial, sans-serif;
+	font-size: 100%;
+}
+H2 {
+	font-size: 100%;
+}
+UL.armario {
+	width: 250px;
+}
+UL {
+	list-style: none;
+	margin: 0;
+	padding: 5px;
+}
+LI A {
+	text-decoration: none;
+	color: #666;
+}
+H2.titulo-caixon {
+	margin: 0;
+	padding: 5px;
+	background-color: #e5e5e5; /*Color gris de fondo do título do caixón.*/
+}
+
+H2.titulo-caixon.aberto {
+	background-color: #4E64A5; /*Color de fondo azul cando un caixón está aberto.*/
+}
+</style>
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript">
+$(document).ready(function()
+{
+	$("li.caixon ul").hide(); // Ocultamos los hiperenlaces.
+	
+	$("h2.titulo-caixon").click(function()
+	{
+		// A las listas visibles  les aplica slideUp, y al hermano anterior
+		// les saca la clase aberto.
+		$("li.caixon ul:visible").slideUp().prev().removeClass("aberto");
+		
+		// Al objeto en el que hemos hecho click (h2), le aplica la clase aberto
+		// Y al hermano siguiente (next()) lo despliega con slideDown().
+		$(this).addClass("aberto").next().slideDown();
+	});
+});
+</script>
+</head>
+<body>
+<h1>Menú desplegable con jQuery.</h1>
+  <ul class="armario"> <!--Para limitar o ancho dos caixons da lista.-->
+
+    <li class="caixon">
+      <h2 class="titulo-caixon">Descargas</h2>
+      <ul>
+        <li id="sn-downloadsmacosx"><a href="http://www.apple.com/downloads/macosx/">All Categories</a></li>
+        <li id="sn-aperture"><a href="http://www.apple.com/downloads/macosx/aperture/">Aperture</a></li>
+        <li id="sn-apple"><a href="http://www.apple.com/downloads/macosx/apple/">Apple</a></li>
+        <li id="sn-audio"><a href="http://www.apple.com/downloads/macosx/audio/">Audio</a></li>
+        <li id="sn-automator"><a href="http://www.apple.com/downloads/macosx/automator/">Automator Actions</a></li>
+        <li id="sn-businessfinance"><a href="http://www.apple.com/downloads/macosx/business_finance/">Business &amp; Finance</a></li>
+        <li id="sn-calendars"><a href="http://www.apple.com/downloads/macosx/calendars/">Calendars</a></li>
+        <li id="sn-developmenttools"><a href="http://www.apple.com/downloads/macosx/development_tools/">Development Tools</a></li>
+        <li id="sn-drivers"><a href="http://www.apple.com/downloads/macosx/drivers/">Drivers</a></li>
+        <li id="sn-emailchat"><a href="http://www.apple.com/downloads/macosx/email_chat/">Email &amp; Chat</a></li>
+        <li id="sn-finalcutstudio"><a href="http://www.apple.com/downloads/macosx/finalcutstudio/">Final Cut Studio</a></li>
+        <li id="sn-games"><a href="http://www.apple.com/downloads/macosx/games/">Games</a></li>
+        <li id="sn-homelearning"><a href="http://www.apple.com/downloads/macosx/home_learning/">Home &amp; Learning</a></li>
+        <li id="sn-iconsscreensavers"><a href="http://www.apple.com/downloads/macosx/icons_screensavers/">Icons, Screensavers, etc.</a></li>
+        <li id="sn-imaging3d"><a href="http://www.apple.com/downloads/macosx/imaging_3d/">Imaging &amp; 3D</a></li>
+        <li id="sn-internetutilities"><a href="http://www.apple.com/downloads/macosx/internet_utilities/">Internet Utilities</a></li>
+        <li id="sn-ipoditunes"><a href="http://www.apple.com/downloads/macosx/ipod_itunes/">iPod + iTunes</a></li>
+        <li id="sn-mathscience"><a href="http://www.apple.com/downloads/macosx/math_science/">Math &amp; Science</a></li>
+        <li id="sn-networkingsecurity"><a href="http://www.apple.com/downloads/macosx/networking_security/">Networking &amp; Security</a></li>
+        <li id="sn-productivitytools"><a href="http://www.apple.com/downloads/macosx/productivity_tools/">Productivity Tools</a></li>
+        <li id="sn-spotlight"><a href="http://www.apple.com/downloads/macosx/spotlight/">Spotlight Plugins</a></li>
+        <li id="sn-systemdiskutilities"><a href="http://www.apple.com/downloads/macosx/system_disk_utilities/">System/Disk Utilities</a></li>
+        <li id="sn-unixopensource"><a href="http://www.apple.com/downloads/macosx/unix_open_source/">UNIX &amp; aberto Source</a></li>
+        <li id="sn-video"><a href="http://www.apple.com/downloads/macosx/video/">Video</a></li>
+        <li id="sn-dashboard"><a href="http://www.apple.com/downloads/dashboard/" class="bottom">Widgets</a></li>
+      </ul>
+    </li>
+
+    <li class="caixon">
+      <h2 class="titulo-caixon">Top Descargas</h2>
+      <ul>
+        <li><a title="iTunes 7.5" href="http://www.apple.com/itunes/download/">1. iTunes 7.5</a></li>
+        <li><a title="QuickTime 7.3.1" href="http://www.apple.com/quicktime/download/">2. QuickTime 7.3.1</a></li>
+        <li><a title="Safari 3 Public Beta" href="http://www.apple.com/safari/download/">3. Safari 3 Public Beta</a></li>
+        <li><a title="MacPool" href="http://www.apple.com/downloads/macosx/games/simulation_and_sports/macpool.html">4. MacPool Realistic and easy to play computer simu…</a></li>
+        <li><a title="Guitar Hero III: Legends of Rock" href="http://www.apple.com/downloads/macosx/games/demos_updates/guitarheroiiilegendsofrock.html">5. Guitar Hero III: L…</a></li>
+        <li><a title="Messenger for Mac" href="http://www.apple.com/downloads/macosx/email_chat/messengerformac.html">6. Messenger for Mac</a></li>
+        <li><a title="Google Earth" href="http://www.apple.com/downloads/macosx/home_learning/googleearth.html">7. Google Earth</a></li>
+        <li><a title="Monopoly" href="http://www.apple.com/downloads/macosx/games/cards_puzzle/monopoly.html">8. Monopoly</a></li>
+        <li><a title="Litho System Icons" href="http://www.apple.com/downloads/macosx/icons_screensavers/lithosystemicons.html">9. Litho System Icons</a></li>
+        <li><a title="Battlefield 2142" href="http://www.apple.com/downloads/macosx/games/demos_updates/battlefield2142.html">10. Battlefield 2142</a></li>
+        <li><a title="More iChat Effects" href="http://www.apple.com/downloads/macosx/email_chat/moreichateffects.html">11. More iChat Effects</a></li>
+        <li><a title="Dragster" href="http://www.apple.com/downloads/macosx/internet_utilities/dragster.html">12. Dragster</a></li>
+        <li><a title="iSquint" href="http://www.apple.com/downloads/macosx/ipod_itunes/isquint.html">13. iSquint</a></li>
+        <li class="last"><a title="US Holiday Calendar" href="http://www.apple.com/downloads/macosx/calendars/usholidaycalendar.html">14. US Holiday Calendar</a></li>
+      </ul>
+    </li>
+
+    <li class="caixon">
+      <h2 class="titulo-caixon">Top Descargas Apple</h2>
+      <ul>
+        <li><a title="iTunes 7.5" href="http://www.apple.com/itunes/download/">1. iTunes 7.5</a></li>
+        <li><a title="QuickTime 7.3.1" href="http://www.apple.com/quicktime/download/">2. QuickTime 7.3.1</a></li>
+        <li><a title="Safari 3 Public Beta" href="http://www.apple.com/safari/download/">3. Safari 3 Public Beta</a></li>
+        <li><a title="Mac OS X 10.5.1 Update" href="http://www.apple.com/downloads/macosx/apple/macosx_updates/macosx1051update.html">4. Mac OS X 10.5.1 Up…</a></li>
+        <li><a title="Java for Mac OS X 10.4 Release 5" href="http://www.apple.com/downloads/macosx/apple/macosx_updates/javaformacosx104release5.html">5. Java for Mac OS X …</a></li>
+        <li><a title="iPod Reset Utility 1.0.2 for Windows" href="http://www.apple.com/downloads/macosx/apple/ipod_itunes/ipodresetutility102forwindows.html">6. iPod Reset Utility…</a></li>
+        <li><a title="iPhoto 7.1.1" href="http://www.apple.com/downloads/macosx/apple/application_updates/iphoto711.html">7. iPhoto 7.1.1</a></li>
+        <li><a title="Bonjour for Windows" href="http://www.apple.com/downloads/macosx/apple/windows/bonjourforwindows.html">8. Bonjour for Windows</a></li>
+        <li><a title="Mac OS X 10.4.11 Combo Update (PPC)" href="http://www.apple.com/downloads/macosx/apple/macosx_updates/macosx10411comboupdateppc.html">9. Mac OS X 10.4.11 C…<br/>
+          The 10.4.11 Update is recommended for al…</a></li>
+        <li><a title="Java for Mac OS X 10.4, Release 6" href="http://www.apple.com/downloads/macosx/apple/macosx_updates/javaformacosx104release6.html">10. Java for Mac OS X …</a></li>
+        <li><a title="GarageBand 4.1.1" href="http://www.apple.com/downloads/macosx/apple/application_updates/garageband411.html">11. GarageBand 4.1.1</a></li>
+        <li><a title="iPod Updater 2006-06-28 for Windows" href="http://www.apple.com/downloads/macosx/apple/ipod_itunes/ipodupdater20060628forwindows.html">12. iPod Updater 2006-…</a></li>
+        <li><a title="Security Update 2007-009 1.1 (10.4.11 Universal)" href="http://www.apple.com/downloads/macosx/apple/security_updates/securityupdate20070091110411universal.html">13. Security Update 20…</a></li>
+        <li class="last"><a title="Security Update 2007-009 1.1 (10.5.1)" href="http://www.apple.com/downloads/macosx/apple/security_updates/securityupdate2007009111051.html">14. Security Update 20…</a></li>
+      </ul>
+    </li>
+    
+  </ul>
+
+  </body>
+</html>

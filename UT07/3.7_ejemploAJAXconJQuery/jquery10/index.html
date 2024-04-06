@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Formulario normal convertido en Ajax con jQuery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="javascript" src="../scripts/jquery.js"></script>
+<script language="javascript" src="../scripts/jquery.form.js"></script>
+<script language="javascript">
+$(document).ready(function()
+{
+	$("#formulario").ajaxForm(function(resultados)
+	{
+		$("#programacion").fadeOut(function()
+		{
+			$("#programacion").html(resultados).fadeIn();
+		});
+	});
+
+});
+</script>
+</head>
+<h1>Formulario convertido a Ajax con plugin Ajax.Form de jQuery</h1>
+<div id="programacion">
+  <form id="formulario" name="formulario" method="post" action="altas.php">
+    Aula de la Incidencia:
+    <label>
+      <select name="aula" id="aula">
+        <option value="0">Seleccione Aula</option>
+        <option value="Aula 10">Aula 10</option>
+        <option value="Aula 15">Aula 15</option>
+        <option value="Aula 23">Aula 23</option>
+      </select>
+    </label>
+    <br />
+    Profesor que comunica incidencia:
+    <label>
+      <select name="profec" id="profec">
+        <option value="0">Seleccione Profesor</option>
+        <option value="mariac">Castañar Torres, Maria</option>
+        <option value="romerales">Romerales Castillo, Francisco</option>
+        <option value="ruarez">Suarez Garcia, Rodrigo</option>
+        <option value="vogart">Vogart Perez, Eduardo</option>
+      </select>
+    </label>
+    <br />
+    Profesor que resolvio la incidencia:
+    <label>
+      <select name="profer" id="profer">
+        <option value="0">Seleccione Profesor</option>
+        <option value="mariac">Castañar Torres, Maria</option>
+        <option value="romerales">Romerales Castillo, Francisco</option>
+        <option value="ruarez">Suarez Garcia, Rodrigo</option>
+        <option value="vogart">Vogart Perez, Eduardo</option>
+      </select>
+    </label>
+    <br />
+    Descripción de la incidencia:
+    <label>
+      <textarea name="descripcion" id="descripcion" cols="45" rows="5"></textarea>
+    </label>
+    <br />
+    Fue resuelta:
+    <label>
+      <input name="resuelta" id="resuelta" value="S" type="radio" />Si
+    </label>
+    <label>
+      <input name="resuelta" id="resuelta" value="N" checked="checked" type="radio" />
+    </label>
+    No<br />
+    <label>
+      <input name="limpiar" id="limpiar" value="Restablecer" type="reset" />
+    </label>
+    <input name="enviar" id="enviar" value="Enviar" type="submit" />
+  </form>
+</div>
+</html>
