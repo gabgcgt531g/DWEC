@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Mutation Observer</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <ol contenteditable oninput="">
+    <li>Haz clic en este párrafo y presiona la tecla intro</li>
+  </ol>
+  <script>
+    var MutationObserver = window.MutationObserver ||
+      window.WebKitMutationObserver ||
+      window.MozMutationObserver;
+    var list = document.querySelector('ol');
+    var observer = new MutationObserver(function (mutaciones) {
+      mutaciones.forEach(function (mutacion) {
+        if (mutacion.type === 'childList') {
+          var listaDeValores = [].slice.call(list.children)
+            .map(function (node) { return node.innerHTML; })
+            .filter(function (s) {
+              return (s !== '<br>');
+            });
+          console.log(listaDeValores);
+        }
+      });
+    });
+
+    observer.observe(list, {
+      attributes: true,
+      childList: true,
+      characterData: true
+    });
+  </script>
+
+
+</body>
+
+</html>
