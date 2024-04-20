@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p title="Texto de un párrafo">Esto es un ejemplo de <b>texto <i>HTML</i><br />
+      que puedes tener</b> en tu documento.</p>
+
+  <script>
+    window.alert(document.getElementsByTagName("p")[0].childNodes[1].childNodes[0].nodeValue);
+    window.alert(document.getElementsByTagName("p")[0].childNodes[1].lastChild.nodeValue);
+  </script>
+
+  <div title="Texto de un párrafo">Esto es un ejemplo de <b>texto HTML<br />
+      que puedes tener</b> en tu documento.</div>
+
+  <script>
+    document.getElementsByTagName("div")[0].childNodes[1].firstChild.nodeValue = "TEXTO MODIFICADO ";
+  </script>
+
+  <br>
+
+  <span title="Texto de un párrafo">Esto es un ejemplo de <b>texto HTML<br />
+      que puedes tener</b> en tu documento.</span>
+
+  <script>
+    document.getElementsByTagName("span")[0].firstChild.nodeValue +=
+      document.getElementsByTagName("span")[0].childNodes[2].nodeValue;
+    document.getElementsByTagName("span")[0].childNodes[2].nodeValue = "";
+
+  </script>
+
+
+</body>
+
+</html>

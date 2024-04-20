@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Creación y borrado de Nodos</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p title="Texto de un párrafo" id="parrafito">Esto es un ejemplo de <b>texto HTML<br />
+      que puedes tener</b> en tu documento.</p>
+
+  <!-- Para AÑADIR contenido a un nodo existente -->
+
+  <script>
+    var nuevoParrafo = document.createElement('p');
+    var nuevoTexto = document.createTextNode('Contenido añadido al párrafo.');
+    nuevoParrafo.appendChild(nuevoTexto);
+
+    document.getElementById('parrafito1').appendChild(nuevoParrafo);
+  </script>
+
+  <!-- Para ELIMINAR un nodo existente -->
+
+  <script>
+    //Creamos tres elementos nuevos: p, b, br
+    var elementoP = document.createElement('p');
+    var elementoB = document.createElement('b');
+    var elementoBR = document.createElement('br');
+
+    //Le asignamos un nuevo atributo title al elementoP que hemos creado.
+    elementoP.setAttribute('title', 'Parrafo creado desde JavaScript');
+
+    //Preparamos los nodos de texto
+    var texto1 = document.createTextNode('Con JavaScript se ');
+    var texto2 = document.createTextNode('pueden realizar ');
+    var texto3 = document.createTextNode('un monton');
+    var texto4 = document.createTextNode(' de cosas sobre el documento.');
+
+    //Añadimos al elemento B los nodos de texto2, elemento BR y texto3.
+    elementoB.appendChild(texto2);
+    elementoB.appendChild(elementoBR);
+    elementoB.appendChild(texto3);
+
+    //Añadimos al elemento P los nodos de texto1, elemento B y texto 4.
+    elementoP.appendChild(texto1);
+    elementoP.appendChild(elementoB);
+    elementoP.appendChild(texto4);
+
+    //insertamos el nuevo párrafo como un nuevo hijo de nuestro parrafo
+    document.getElementById('parrafito').appendChild(elementoP);
+
+  </script>
+
+
+</body>
+
+</html>

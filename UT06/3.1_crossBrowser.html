@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script>
+    // FUNCIÓN CROSS BROWSER
+    var crearEvento = function () {
+      function w3c_crearEvento(elemento, evento, mifuncion) {
+        elemento.addEventListener(evento, mifuncion, false);
+      }
+      function ie_crearEvento(elemento, evento, mifuncion) {
+        var fx = function () {
+          mifuncion.call(elemento);
+        };
+        // Cuando usamos attachEvent dejamos de tener acceso
+        // al objeto this en mifuncion. Para solucionar eso
+        // usaremos el método call() del objeto Function, que nos permitirá
+        // asignar el puntero this para su uso dentro de la función. El primer
+        // parámetro que pongamos en call será la referencia que se usará como
+        // objeto this dentro de nuestra función mifuncion. De esta manera solucionamos el problema
+        // de acceder a this usando attachEvent en Internet Explorer.
+
+        elemento.attachEvent('on' + evento, fx);
+      }
+      if (typeof window.addEventListener !== 'undefined') {
+        return w3c_crearEvento;
+      } else if (typeof window.attachEvent !== 'undefined') {
+        return ie_crearEvento;
+      }
+    }();     // <= Esta es la parte más crítica - tiene que terminar en ()
+  </script>
+
+
+</body>
+
+</html>

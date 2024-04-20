@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p title="Texto de un párrafo" id="parrafito">Esto es un ejemplo de <b>texto HTML<br />
+      que puedes tener</b> en tu documento.</p>
+
+  <script>
+    document.getElementById("unparrafo").addEventListener('click', gestionar, false);
+    // Este ejemplo también funciona correctamente en la versión 9 de Internet Explorer.
+    function gestionar(miEvento) {
+      alert(miEvento.type);  // Mostrará una alerta con el tipo de evento que en este caso es 'click'.
+    }
+
+  </script>
+</body>
+
+</html>

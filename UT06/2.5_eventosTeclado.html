@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form name="formulario" id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" />
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" />
+    <label for="provincia">Provincia:</label>
+    <input type="text" id="provincia" name="provincia" />
+    <input type="button" id="enviar" value="Enviar" />
+  </form>
+  <script type="text/javascript">
+    function cambiar(evt) {
+      if (evt.keyCode == 13)  // Código de la tecla Enter
+        if (this.nextSibling.nextSibling.type == "text")
+          this.nextSibling.nextSibling.focus();
+    }
+    var inputs = document.getElementsByTagName("input");
+    for (i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener("keypress", cambiar, false);
+    }
+  </script>
+
+</body>
+
+</html>

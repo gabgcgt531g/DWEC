@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Nodos tipo atributo</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+    <p id="nombre" name="apellidos" class="parrafo" title="nodo atributo">Párrafo 1</p>
+    <p id="apellidos" name="apellidos" class="parrafo">Párrafo 2</p>
+    <p id="calle" name="apellidos" class="parrafo">Párrafo 3</p>
+
+    <script>
+      document.write("<br/>El elemento <b>nombre</b> contiene los pares <i>atributo -> valor</i>: <br/>");
+
+      for (var x = 0; x < document.getElementById("nombre").attributes.length; x++) {
+        var atributo = document.getElementById("nombre").attributes[x];
+        document.write(atributo.nodeName + " -> " + atributo.nodeValue + "<br/>");
+      }
+
+      var valorOrig = document.getElementById("nombre").attributes[2].nodeValue;
+      var cambioVal = document.getElementById("nombre").attributes[2].nodeValue = "valor cambiado";
+
+      document.write(
+        "<br/> <b>Podemos modificar el valor de los atributos.</b><br/> El valor original de <i>class</i> es -> "
+        + valorOrig + "<br/>"
+        + "Ahora es -> "
+        + cambioVal
+      );
+
+
+
+
+
+    </script>
+  </body>
+
+</html>

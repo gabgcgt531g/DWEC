@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <input type="text" id="coordenadas" name="coordenadas" size="12" />
+  <script type="text/javascript">
+    function mostrarCoordenadas(elEvento) {
+      document.getElementById("coordenadas").value = elEvento.clientX + " : " + elEvento.clientY;
+    }
+    document.addEventListener('mousemove', mostrarCoordenadas, false);
+  </script>
+
+
+</body>
+
+</html>

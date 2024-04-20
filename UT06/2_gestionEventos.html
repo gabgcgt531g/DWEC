@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/Logo G.png" type="image/png">
+  <title>Acceso a nodos tipo texto</title>
+  <style>
+    * {
+      font-family: JetBrains Mono;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p title="Texto de un párrafo" id="parrafito">Esto es un ejemplo de <b>texto HTML<br />
+      que puedes tener</b> en tu documento.</p>
+
+  <script>
+    // Cuando haga click sobre el párrafito, se abrirar un 'alert'
+    function crearEvento(elemento, tipoEvento, funcion) {
+      if (elemento.addEventListener) {
+        elemento.addEventListener(tipoEvento, funcion, false);
+      } else if (elemento.attachEvent) {
+        elemento.attachEvent("on" + tipoEvento, funcion);
+      } else {
+        elemento["on" + tipoEvento] = funcion;
+      }
+    }
+    var miparrafo = document.getElementById("parrafito");
+    crearEvento(miparrafo, 'click', function () { alert("hola") });
+  </script>
+</body>
+
+</html>
