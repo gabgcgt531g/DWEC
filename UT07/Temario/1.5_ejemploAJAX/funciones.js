@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////
-// Funci�n cross-browser para crear objeto XMLHttpRequest
+// Función cross-browser para crear objeto XMLHttpRequest
 /////////////////////////////////////////////////////////
 function objetoXHR() {
 	if (window.XMLHttpRequest) {

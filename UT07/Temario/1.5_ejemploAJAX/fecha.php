@@ -1,8 +1,7 @@
 <?php
-	// retrasamos 2 segundos la ejecución de esta página PHP.
-	sleep(2);
-	
-	// Mostramos la fecha y hora del servidor web.
-	echo "La fecha y hora del Servidor Web: ";
-	echo date("j/n/Y G:i:s."); 
-?>
+// retrasamos 2 segundos la ejecuciï¿½n de esta pï¿½gina PHP.
+sleep(2);
+
+// Mostramos la fecha y hora del servidor web.
+echo "La fecha y hora del Servidor Web: ";
+echo date("j/n/Y G:i:s.");

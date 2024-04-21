@@ -1,16 +1,16 @@
 <?php
-	// Para que el navegador no haga cache de los datos devueltos por la página PHP.
-	header('Cache-Control: no-cache, must-revalidate');
-	header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
-	
-	// Leemos el contenido del fichero XML
-	// e imprimimos su contenido.
-	// Muy importante indicar al navegador que va a recibir contenido XML
-	// eso lo hacemos con la siguiente cabecera:
-	header("Content-Type: text/xml"); 
-	
-	$ficheroxml="<?xml version=\"1.0\" encoding=\"utf-8\"?>";
-	$ficheroxml.="
+// Para que el navegador no haga cache de los datos devueltos por la página PHP.
+header('Cache-Control: no-cache, must-revalidate');
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+
+// Leemos el contenido del fichero XML
+// e imprimimos su contenido.
+// Muy importante indicar al navegador que va a recibir contenido XML
+// eso lo hacemos con la siguiente cabecera:
+header("Content-Type: text/xml");
+
+$ficheroxml = "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+$ficheroxml .= "
 	<CATALOG>
 	<CD>
 		<TITLE>Empire Burlesque</TITLE>
@@ -223,4 +223,3 @@
 </CATALOG>";
 
 echo $ficheroxml;
-?>

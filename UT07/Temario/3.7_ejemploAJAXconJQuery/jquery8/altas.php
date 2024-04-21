@@ -3,8 +3,13 @@
 require("conexion.php");
 
 if (isset($_POST['identificador'])) {
-    $sql=sprintf("insert into profesores values('%s','%s','%s','%s')",
-	$_POST['identificador'],$_POST['nombre'],$_POST['apellidos'],$_POST['email']);
+    $sql = sprintf(
+        "insert into profesores values('%s','%s','%s','%s')",
+        $_POST['identificador'],
+        $_POST['nombre'],
+        $_POST['apellidos'],
+        $_POST['email']
+    );
 
     if ($mysqli->query($sql) === TRUE) {
         echo "Datos insertados OK";
@@ -13,4 +18,3 @@ if (isset($_POST['identificador'])) {
     }
     $mysqli->close();
 }
-?>
