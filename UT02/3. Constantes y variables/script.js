@@ -10,7 +10,7 @@ var edad = 38;
 // Ya que no estamos obligados a declarar la variable pero es una buena práctica el hacerlo.
 edad = 38;
 // Para declarar más de una variable en la misma línea.
-var altura, peso, edad; 
+var altura, peso, edad;
 
 //Nombrar variables
 var mi_peso;
