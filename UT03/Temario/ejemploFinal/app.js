@@ -8,7 +8,7 @@ function agregarTarea() {
   // Validar que el campo no esté vacío
   if (nuevaTareaTexto.trim() === "") {
     alert("Por favor, ingresa una tarea válida");
-    return;    
+    return;
   }
 
   // Crear un nuevo elemento de lista (li)
@@ -24,13 +24,13 @@ function agregarTarea() {
   document.getElementById("nuevaTarea").value = "";
 
   // Se ejecuta cuando se añade una tarea
-  const browserVersion = navigator.appVersion;
+  const browserVersion = navigatorID.appVersion;
   console.log("Versión del navegador:", browserVersion);
   const userLanguage = navigator.language;
   console.log("Idioma del navegador:", userLanguage);
   const userAgent = navigator.userAgent;
   console.log("Agente de usuario:", userAgent);
-  
+
 
 }
 
