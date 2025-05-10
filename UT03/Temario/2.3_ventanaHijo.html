@@ -6,7 +6,14 @@
   <title>Sub-Documento</title>
   <script type="text/javascript">
     function copiarAlPadre() {
-      opener.document.getElementById("original").value = document.getElementById('textocopiar').value;
+      const valor = document.getElementById("textoCopiar").value
+
+      if (window.opener && !window.opener.closed) {
+        window.opener.getElementById("original").value = valor
+      } else {
+        console.log("No se ha copiado")
+      }
+
     }
   </script>
 </head>
@@ -18,7 +25,7 @@
       <label for="textocopiar">
         Introduzca texto a copiar en la ventana principal:
       </label>
-      <input type="text" id="textocopiar" />
+      <input type="text" id="textoCopiar" />
     </p>
     <p>
       <input type="button" value="Enviar texto a la ventana padre" id="enviar" onclick="copiarAlPadre()" />
